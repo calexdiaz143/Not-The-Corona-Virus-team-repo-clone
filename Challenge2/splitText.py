@@ -9,7 +9,7 @@ def splitText(text, delimiter):
     for line in textArray:
         # finds the first line in the section and uses that as the heading
         firstNewlineIndex = line.find("\n")
-        # adds remaining lines to dictionary
+        # adds remaining lines to dictionary, replace("\xa0", " ") added in to get rid of weird symbol
         textDictionary[line[0:firstNewlineIndex]] = (line[firstNewlineIndex + 1:]).replace("\xa0", " ").split("\n")
     return textDictionary
 
