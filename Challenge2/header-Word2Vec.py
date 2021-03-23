@@ -62,23 +62,16 @@ to do this, we need to do some preprocessing on the titles to:
  
 """
 
-def preProcessText(text):
-    text = text.lower()
-    text = text.replace(r'(\b\w{1,2}\b)', '',regex=True)
-    text = text.replace('[^\w\s]', '',regex=True) 
-    return text
+def nlpCleanup(df, columnName):
+    df[columnName] = df[columnName].str.replace('\d+', '',regex=True) # for digits
+    df[columnName] = df[columnName].str.replace(r'(\b\w{1,2}\b)', '',regex=True) # for words
+    df[columnName] = df[columnName].str.replace('[^\w\s]', '',regex=True) # for punctuation 
+    return df
     
-    
-cleanDocs = {}
 
-
-
-    
-for header in docArray.keys():
-    print(header)
 
 """
-Next step is to 
+Next step is to vectorize the situation keywords (aka categories)
 """
 cat_vects = []
 for c in CATEGORIES:
@@ -86,3 +79,5 @@ for c in CATEGORIES:
     cat_vects.append(v)
     
 catDf = pd.DataFrame(data = cat_vects, index = CATEGORIES)
+
+

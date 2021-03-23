@@ -21,4 +21,6 @@ with open(filename, encoding="utf8") as myFile:
     docArray = splitText(data, "***")
     
     print(docArray["Symptoms of Coronavirus"])
+    
+    
 
