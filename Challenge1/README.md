@@ -1,5 +1,5 @@
 <center>
-  <h1>Welcome to Hack the Machine Atlanta Track 2</h1>
+  <h1>Welcome to Hack the Machine Track 2</h1>
   <h2>Challenge 1: Spectrum Labelling</h3>
 </center>
 
@@ -12,8 +12,7 @@ Your job in this challenge: assign each scenario a level of risk from 1-6, with 
 
 Completely Safe (1) &rarr; Mostly Safe (2) &rarr; Moderately Safe (3) &rarr; Ill advised (4) &rarr; Dangerous (5) &rarr; Extremely Dangerous (6)
 
-A training-test list of scenarios will be available to you so that you may tune and improve your algorithms over the course of the event. You will be given a training data set, a test data set, and a validation data set which does not contain the correct label.
-
+A training-test list of scenarios will be available to you so that you may tune and improve your algorithmsover the course of the event. You will be given a training data set, a test data set which does not contain the correct label.
 
 <h3> Example Situation: </h3>
 
