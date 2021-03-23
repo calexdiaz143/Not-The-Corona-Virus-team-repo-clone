@@ -1,10 +1,10 @@
 <center>
   <h1>
-    Hack the Machine Atlanta - Track 2
+    Hack the Machine - Track 2
   </h1>
 </center>
 
-<h2> Welcome to Hack the Machine Atlanta! </h2>
+<h2> Welcome to Hack the Machine! </h2>
 
 Data and documentation for all three challenges can be found in their respective folders. It is highly advised that participants perform the following actions:
 
