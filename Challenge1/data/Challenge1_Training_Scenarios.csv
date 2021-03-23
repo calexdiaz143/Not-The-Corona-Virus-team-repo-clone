@@ -1,0 +1,505 @@
+scenario_id,scenario,danger_level
+1,A 95 year old woman enjoys the sunshine in San Francisco at the local park with her daughter. Social distancing was observed and masks were worn.,1
+2,A 16 year old girl with asthma goes to the orthodontist. She does not socially distance but she wears a mask. Everyone she gets close to has had temperature checks.,3
+3,A gardener plants flowers and cuts the grass at the local cemetary. He makes sure to always wear a mask when anyone enters the park because he is 50 years old and has hyper-tension. ,1
+4,A 22 year old man with PTSD went to a crowded pharmacy. No one wore masks and he got sneezed on.,6
+5,"A 26 year old amazon driver delivers packages to mail rooms throughout the city, they often encounter maskless residents collecting their mail for extended periods of time. ",4
+6,"A 63 year old man goes camping with his friend, who lives in a different household. They share a tent and do not wear masks.",6
+7,A 22 year old EMT arrives at the scene of a single car crash. The car has flipped over and the driver is unconscious and bleeding heavily. The driver is 44 years old and will need immediate medical intervention if they are to survive. It is not known whether the driver has COVID-19 and is not wearing a mask.  ,3
+8,A 70 year old is going to the grocery store. She will be wearing a single layer mask. She plans to go to the grocery store at 9 am (not crowded). She is aware of the need to stay 6 feet away from others and will sanitize her hands after touching surface and does not remove her mask while in the store. ,2
+9,"A 24 year old DJ does a gig at a local club with 100 patrons, who are not wearing masks and are drinking beverages. They are in sectioned off areas which are socially distanced and all received temperature checks. ",5
+10,"You have food delivered to your house, the food is sealed and was not intentionally tampered with by your delivery driver. You asked for contactless delivery and you never got within 6 feet of the delivery person.  ",1
+11,A middle aged man with a severe cold goes to the local pub for a pint. He does not wear a mask while there. ,6
+12,"A group of 35 year olds decide to go camping together, they wear masks on the way there and when near each other but take them off to eat at the park table. ",4
+13,"A 41 year old woman with Asthma went to a rave. No one was social distancing, and she got coughed on.",6
+14,"A 30 year old manager of a clothing store wears a mask while at work, but sometimes her patrons do not. She has to get close to them sometimes to tell them to put on a mask, which makes her nervous.",2
+15,A cashier at Chipotle works an 8 hour shift. He wears a mask for his entire shift and has a plastic barrier between him and customers at all times. He is 26 years old. ,2
+16,A 65 year old woman rides a train. No one is social distancing or wearing masks.,6
+17,A 16 year old stops at the Starbucks drive thru before going to high school. She does not wear a mask while talking to the employee who takes her credit card and was recently feeling sick but is feeling better that day. ,3
+18,A middle aged man is a manager at a large tech company. He goes into the office once a week to meet with the CEO in his well ventilated office while they both wear masks. ,2
+19,A 73 year old grandfather has a dinner party at his home with 7 friends. No one socially distances or wears masks.,6
+20,A 67 year old man who smokes and has high blood pressure goes to a gas station and pumps gas. He is standing within 3 feet of another person. Neither are wearing masks. He touches the gas pump and then eats a sandwich without washing his hands. ,5
+21,Elliot Reed goes to school in New Castle Connecticut for finance. He works from home when the pandemic hits and never goes out. All groceries and items he needs he gets contactless delivered to himself. ,1
+22,A 59 year old man who has diabetes goes for a walk outside without a mask during peak hours and encounters others in close proximity without a mask on. ,4
+23,A workman on a big highway project rides in a truck with 4 other guys to their job site. None of them wear masks in the care and they all come from separate households. All the men are older besides the original workman who is 20. ,5
+24,A 21 year old goes to a dorm party with 20 other students in a small space. They are drinking alcohol and hanging out for 3 hours. No one is wearing a mask at any point. It is unknown whether any of the students have COVID-19. ,6
+25,A 62 year old smoker with high blood pressure goes to a coffee shop with one friend. No one socially distances or wears a mask.,6
+26,A 100 year old art historian visits a museum. The only other person present is her personal assistant who is in her pod.,1
+27,"An 83 year old woman flies on an airplane. She wears a mask and has no known health issues. The airplane is crowded and no one is able to socially distance, but everyone wears a mask.",3
+28,A 59 year old healthy man goes to a coffee shop with one friend. They do not socially distance or wear a mask.,6
+29,A 91 year old grandmother goes to a hotel lobby brunch with 3 other people. No one wears a mask or socially distances.,5
+30,A 23 year old boy goes on a first date in a park with a girl he met on a dating app. They do not wear masks but do socially distance for the first part of the date. ,3
+31,A 50 year old software developer works remotely in Golden Gate park. He sits 50 feet away from all other people and doesn't wear a mask. ,1
+32,"A 46 year old man goes to a photography showing at a local art gallery and wears a mask the whole time. There are twenty other people present, two of whom are not wearing masks. They are not distanced well because the gallery is small. ",4
+33,"On a rainy day, a 19 year old woman goes to a college house party. There are 50 people there and no one wears a mask.",6
+34,"A lumber jack lives alone in th forest and goes to work for a lumber company during the day, he never gets within 6 feet of other people and doesn’t wear a mask.  ",1
+35,An executive at a large technology company in Los Angeles visits a spa for a massage. Her massage therapist wears a mask for the entire 1 hour session but she does not. She has type 1 diabetes.,5
+36,A 52 year old mom takes her son to get dinner at a restaurant with a patio. They sit outside 10 feet from other customers and their waiter wears a mask. ,3
+37,"A 33 year old man has his twin brother over to his house for game night. They do not live in the same house. While they don’t share any food or drinks, they sit near each other with no masks for 2 hours. ",3
+38,A 60-year-old with high blood pressure is flying to visit his grandkids.  He wears a 2-ply mask and face shield and regularly sanitizes his hands after coming in contact with surfaces.  The plane is at near capacity and he is sitting in the aisle seat.,3
+39,A 53 year old man with diabetes goes to the gym for an hour with his wife. They wear masks while working out but others do not. There are 4 other people nearby them on the treadmills.,6
+40,"A 22 year old EMT tends to an elderly man who has just suffered a heart attack in a crowded café. Most patrons are wearing masks and keep 6 feet of distance, It is unknown if the endely man has COVID-19. ",3
+41,A 14 year old boy goes to a candy shop. All other patrons are wearing face masks but the shop is extremely crowded. ,4
+42,"A 34 year old lawyer attends a meeting in a small conference room with 5 other people, all of whom remove their maks for the duration of their meeting. ",6
+43,A therapist sees patients in her well ventilated spacious office. Patients sit 10 feet away from her and are required to wear masks. ,1
+44,A 88 year old woman with emphysema goes to an outdoor park with five other people. She is unable to socially distance but everyone is wearing a mask.,3
+45,A 43-year-old woman is hiking on a popular trail in the mountains.  She is wearing a mask and regularly encounters other hikers not all of whom wear masks.,2
+46,A 59 year old woman with high blood pressure goes to a party in an apartment with 4 other people. No one wears a mask or socially distances.,6
+47,"A 95 year old woman with health problems spends an afternoon with her daughter, who later tests positive for COVID-19. The woman is wearing a mask but her daughter is not.",6
+48,A barrista at a trailer coffee shop serves customers all morning. He is 20 years old and all his customers wear a mask when they interact with him.,2
+49,"A 80 year old woman with lung cancer goes to a doctor’s appointment. She wears a mask and is within 6 feet of three other people, all of whom test negative for COVID-19 on a regular basis and whom wear masks and face shields. ",2
+50,A healthy 61 year old man orders food delivery. The food is left at the door and he has no interaction with anyone.,1
+51,A 99 year old woman goes for a walk in the local park in Houston. She is accompanied by her grandson who has recently been exposed to COVID-19 and does not wear a mask around her. ,5
+52,A 69 year old man goes to play billiards at a crowded bar with 1 friend. No one wears a mask or socially distances.,6
+53,A 44 year old man watches a basketball game at home with his sons who don't usually live with him. Everyone wears a face mask but sit very close together in the living room. ,5
+54,A 4 year old is carried by their mother to the local park where they sit on the grass together. ,1
+55,A 67 year old stays home with her dogs during the pandemic and does not go into public spaces. Only going out to have picnics on the lawn with her friends who all sit 10 feet away from her. ,1
+56,"A 26 year old plays soccer on a hot summer day with 15 friends. They all wear masks, but not securely and sometimes take them off to drink water. ",3
+57,"A 46 year old nail technician works every day at a nail salon and wears a mask, but some of her patrons do not and refuse to. She has lung problems from the fumes she inhales at work. ",6
+58,"A healthy 40 year old quarantines at home with her two small children, who go to school each day and do not socially distance or wear masks.",5
+59,A group of people in their early 20s go to the park and drink together. Everyone shares drinks and no one social distances including Remy Martin  who has type 1 diabetes. ,6
+60,"A middle aged musican plays drums for his band at an outdoor venue that is attended by 150 people, masks are not required. The band stays 30 feet from patrons at all times and do not wear masks. ",3
+61,"A 55 year old goes to the park with his dog, there is no one else there. ",1
+62,A 54 year old fishing boat captain spends his days on the ocean with his two sons who work with him. The three of them do not interact with anyone outside of their family pod. ,1
+63,A 25 year old gymnastics teach tutors her team at the local gymnasium. The coach keeps their mask on the entire time but the team members remove their masks when they hit the floor. The building is well ventilated and has plenty of fresh air. ,2
+64,A 68 year old woman with a kidney disorder went to a nightclub. It was crowded and no one was wearing a mask.,6
+65,A 63 year old woman with emphysema goes to a crowded casino. No one is wearing a mask or socially distancing. ,6
+66,A 55 year old schoolteacher teaches a classroom of 25 kindergarteners. She wears a mask but the children do not.,5
+67,Two friends who do not live together decide to go for a run.  They are in their late 20s. They both do not wear masks and often get within 6 feet of each other when passing others on the trail. They run around a trail with full sunlight and a constant breeze for 2 hours.  ,4
+68,A 87 year old goes to a wine bar for a night cap. He does not wear a mask and sits indoors out of the 5 degree weather. There are 20 other people in the restaurant without masks eating and drinking ,6
+69,A 53 year old woman with asthma went to eat ramen with her daughter at a restaurant outside where their tables were placed 6 feet apart from others. ,4
+70,A 20 year old college student goes to a party with 5 other people. No one socially distances but everyone wears a mask.,6
+71,A 52 year old obese woman with several health issues delivers for Doordash. She interacts closely with several people who are not wearing a mask but she wears a mask.,4
+72,"The world chess championships are held indoors at a well ventilated convention center. A 13 year old girl competes, all attendees are required to wear masks but several hundred people inhabit the same room. ",4
+73,A 28-year-old with asthma is picking up books being held for her from the public library.  She wears a mask and only interacts with the librarian who is also wearing a mask.  She washes her hands after returning home with her books.,2
+74,"In a snow storm, a 66 year old Girl who has wearing a mask went on bowling with ten other people. The others were wearing a mask. Social distancing was practiced.",3
+75,"A middle school teacher teaches online classes, she only goes to the grocery store once a week to pick up food and wears a mask when she does. ",2
+76,A 38 year old man goes to the laundromat to do his laundry where he encounters five other people not wearing masks. He is also not wearing a mask. They linger inside the establishment for 2 hours while doing their laundry. ,6
+77,"A 45-year-old man goes a restaurant to pick up food and wears a mask, as do all employees of the restaurant. All other patrons also wear masks and socially distance while waiting. ",2
+78,A 97 year old man celebrates his birthday at a nursing home with his 7 close family members. They all wear masks and were tested before hand. ,3
+79,A 33 year old man with cancer is visited by a friend who he later learned had COVID-19 with no symptoms. The two stayed 6 feet apart and wore masks during their 2 hour visit.,2
+80,"During an earth quake in San Francisco a group of 100 people gather in a public park to avoid any buildings. 28 year old Daryl Hall amoung this group. Most of those people around him wear masks but 20 do not, he has bone cancer. ",5
+81,A 45 year old woman with no health issues goes to an outdoor restaurant with 7 other friends. No one socially distances and no one wears a mask.,5
+82,"A 4 year old child attends a gymnastics class in a large building with six other children, none of whom are wearing masks. There is no social distancing. There is one adult coach age 25 and 7 parents between the ages of 30-55. This class lasts 45 minutes. ",5
+83,A 40 year old woman goes to a movie theater with two friends while wearing masks. They do not socially distance from others but everyone wears masks while in the theater. ,4
+84,A 34 year old software engineer stays at home and cooks dinner for himself after having his groceries contactless delivered to him.,1
+85,An 85 year old with Crohn’s disease goes to a restaurant and orders take out. They wait outside and maintain 6 feet of distance while wearing a mask while their food is being prepared. There was no line at the restaurant and they sanitize their hands after paying for their meal which they take home to eat.  ,2
+86,"A 75 year old man is in close proximity to his spouse, who tests positive for COVID-19. He has several health problems.",6
+87,"A 30 year old man went to look at an indoor wedding venue with his fiance. They came into contact with one other person and did not socially distance, but everyone wore masks.",5
+88,"A 63 year old male who was not wearing a mask flew on an airplane, social distancing was practiced because all seating was 5-10 feet apart.",2
+89,"54 year old Matt Simons is the attending physician on a COVID-19 floor at a hospital. He wears a fitted N-95 mask, face shield, and gloves but must get within 6 feet of patients to treat them everyday.",6
+90,A 19 year old boy visits a dog park. He interacts with 20 individual's dogs without a mask on. None of the dog's owners seem to have COVID-19,2
+91,"A 40 year old doctor working on a COVID-19 floor administers treatments to 15 sick patients while wearing an N-95 mask, face shield, and full body scrubs.",3
+92,A 95 year old female who was not wearing a mask went to the gym. Social distancing was practiced.,6
+93,A 2 year old is taken to see their primary care provider at a doctor's office with their parent. The child does not have a mask on but everyone they interact with does. ,2
+94,"A 45 yeah old works in the mail room at the post office with 5 other inidividuals, all of them wear masks but are within 10 feet of each other for 8 hours a day",3
+95,A 43 year old woman goes to Mommy & Me class with her baby. There are 8 other people there and no one wears masks or socially distances.,5
+96,"A 35 year old man attends a speaking event in a large conference room, the speaker removes their mask to deliver their presentation and quickly puts in back on after finishing. Each person has a chair about 6 feet away from each other arranged in a rectangular pattern in the room. Traditional air conditioning and ventilation are working.  ",2
+97,A 64 year old saxaphonist plays with his band at the Black Cat club in downtown Los Angeles. He has no known health problems but plays in the small stuffy room for 40 people without a mask on for 2 hours.,6
+98,A 39 year old man takes his son to the pier to watch the seaguls. They wear their masks and always stay 20 feet apart from all other people. The day is very sunny and windy,1
+99,A 50 year old female who was not wearing a mask went to an indoor restaurant. Social distancing was practiced between tables.,5
+100,A 67 year old man goes to the heart doctor. He interacts closely with his doctor and both of them wear masks.,1
+101,A 20 year old woman without health issues shares a hotel room with another woman. They do not wear masks or socially distance. The other woman has COVID-19 symptoms.,6
+102,a 94 year old man was visited by his 5 grandchildren for his birthday and they socially distanced and all wore masks. The grandchildren got tested for COVID before visiting. ,1
+103,"A healthy 63 year old woman and her daughter, who lives in a different home, go kayaking. ",2
+104,"A 19 year old ice skater goes to the rink to practice for her upcoming competition with her partner, they practice together for 1 hour. She always socially distances and wears a mask but her partner does not, if fact he frequently goes out to hang out with lots of friends. ",4
+105,"A 12 year old goes to school for the day, no social distancing and spotty mask use. ",6
+106,A 41 year old day care teacher takes care of four 5 year olds for the day. All of the children wear mask during their stay and when they interact with her. ,2
+107,"A 38 year old billionaire goes to a pool party with some of his friends, no one wears a mask and everyone eats together.",5
+108,A 72 year old with pancreatic cancer goes to see a spiritual leader named Guru Sky. He hugs the guru who has met with hundreds of other people that day. Neither of them wear a mask for their interaction.,6
+109,"A 2 year old child attends preschool 5 days a week for 8 hours with 7 other children, none of whom wear masks. One of the children tests positive for COVID-19 two days after last being in the classroom. ",6
+110,"A 20 year old goes to a parade in downtown Houston where 10,000 people are in attendance. 90% of the crowd wears masks but they are all very tightly bunched together on the sidewalks as the festivities pass. ",4
+111,"Two friends in their 80s go to a bingo parlor, both wear masks and they are the only ones there. They keep far away from all other people. ",1
+112,A 48 year old film director is on set with the entire cast and crew of 45 people. No one wears a mask and the actors regularly touch each other while filming.,5
+113,Two 36 year old men who were wearing masks went climbing with three other people. The other three people were wearing masks. Social distancing was practiced.,1
+114,A 20 year old welder works on a costruction site fixing together metal pipes. He does not wear a mask while at work but all his coworkers stay 20 feet away from him the entire day. ,1
+115,"A 9 year old boy plays with his two friends on the local playgound, none of them wear masks and they come into close contact. ",4
+116,"An 80 year old woman takes a 4 hour flight from Los Angeles to New York, all passengrs wear masks and social distancing is not maintained at all. ",3
+117,A 23 year old goes for a run in central park. She does not wear a mask but passes within 6 feet of may other runners on the path. ,2
+118,"A 30 year old works as a bookseller at a chain bookstore and wears a mask while at work, as do the patrons. He has diabetes and lives with his asthmatic mother who is obese. ",4
+119,"A 42 year old police officer arrives at the scene of a minor accident where no serious bodily harm was done. There is damage to a vehicle so the officer talks to both parties outside in open air, and collects insurance and registration from both parties involved. 6 feet of distance is observed by all parties during the entire encounter.  ",1
+120,A 23 year old software engineer goes into his office to do a code review with his boss. They both wear face masks but sit in a tiny poorly ventilated office for 45 minutes. ,4
+121,23 year old Alex Honnold works at a groery store stocking shelves. He often gets in close proximity to customers and only wears a thin neck gator as a mask.,4
+122,"An 18 year old man with no health problems spends time with his girlfriend. She has no COVID-19 symptoms. The next day, her father tests positive for COVID-19. ",2
+123,A 60 year old has confirmed through a test that they have COVID-19 and are experiencing severe symptoms. They are overall in good health with no serious pre-existing conditions.  They routinely take public transportation to get groceries and run errands essential to surviving. They work for a technology company and have the option to work from home.  ,3
+124,A 23 year old woman goes to Pilates. There are 10 people in a small room and no one socially distances or wears masks.,5
+125,A 78-year-old man in good health is playing golf with 3 of his friends.  All of the party will be wearing masks but will be sharing a golf cart and not maintaining 6ft of distance.,3
+126,A software engineer goes into work and has a meeting with 5 colleagues in a small conference room without a mask. She is healthy and has no prior exposures to COVID-19.,5
+127,A 62 year old woman with high blood pressure attends a cycling class with 9 other people for 1 hour. No one is wearing a mask. Everyone has temperature checks and remains 6 feet apart.,6
+128,A 75 year old man with COPD goes for an outdoor walk. He does not wear a mask but stays 6 feet apart from other walkers.,2
+129,"A 59 year old man lives with his wife and two daughters who do virtual school. He occasionally sees friends for socially distanced masked work meetings, occasionally travels for work. ",3
+130,A team of fabricators work on constructing a public playground. All of them follow COVID-19 guidelines outside of work and always wear masks when within 6 feet of each other. ,1
+131,"A 40 year old woman sells wares from the back of her car at a farmer's market. She wears a mask as do most of the patrons, but not all. She is unable to socially distance while showing them some of the items. ",3
+132,A middle aged woman who lives in Colorado Springs goes snowboarding by herself over the weekend. ,1
+133,A 15 years old boy went to high school with 50 other people. None of his peers are wearing a masks and social distancing was not practiced in classrooms or at mealtimes. ,6
+134,A 47 year old man is a plumber and goes into a family's home who are not wearing masks. He does and has a congenital heart condition. He maintains social distancing while in the home.,4
+135,A 67 year old woman with cancer sits outside with neighbors for 2 hours. They sit 6 feet apart.,3
+136,A 35 year old with no previous health issues works at a fast food restaurant. She wears a mask but is unable to socially distance.,5
+137,A 84 year old male who was not wearing a mask watches a baseball game alone at home.,1
+138,A 30 year old woman with a cold works from home. Her husband works in restaurants for a living and has recently interacted with someone who has been confirmed to have COVID-19,5
+139,A 34 year old goes to a local club in San Francisco. Masks are required by all people who enter but the room is packed and social distancing is not followed. ,4
+140,10 friends from different friend groups all meet up to tube down the river. No social distancing is practiced and they all share drinks together. ,6
+141,"A 9 year old boy lives with his sister, who had contact with a COVID-19 positive person the previous day. No one was social distancing or wearing masks.",5
+142,A 76 year old woman with several health issues orders groceries. The groceries are left at the door and she has no interaction with anyone.,1
+143,A 24 year old has 3 friends over for dinner and drinks on her patio. They spend most of their time outside on the patio wihtout masks 8 feet apart. ,3
+144,"A 50 year old woman with COPD goes to IKEA and wears a mask, as do other patrons. They do not maintain social distancing and she touches items throughout the store. ",3
+145,A 42 year old woman with diabetes goes to her daughter's outdoor cheer competition. No one wears masks but everyone maintains social distancing.,4
+146,A 14 year old high school student goes skateboarding with three friends outside. They do not socially distance or wear masks.,4
+147,"A 52 year old with diabetes is walking down a street in New York city where 6 feet of distance from strangers is not observed. Also many of those who are walking on the sidewalk with the 52 year old are not wearing masks, it is winter time so many of those walking by cough or clear their throat near the 52 year old. ",4
+148,A group of middle aged dads all go to dinner at the local diner. They all remove their masks for the meal and are inside a closed space with other patrons. ,6
+149,The wealthy 40 year old banker Cornelius Van Halen the 16th goes to a local coffee shop in Atlanta. He sits outside the café and drinks his coffee while people walk by. Most people stay 6 feet away from him but nobody wears a mask. ,3
+150,A 23 year old producer goes to the studio to master some tracks for his friend. He stays in the booth which is sealed off from all other people during his entire visit to the studio. ,1
+151,A 52 year old man goes to a 10 person Poker night. No one is wearing a mask and no one is social distancing. The even lasts for four hours. He has significant health problems. 3 people later test positive for COVID-19.,6
+152,"A 42-year-old woman has recently moved into a new apartment which does not yet have WIFI set-up, so she intends on working at a local coffee shop for 2 days until the company is able to come set up her internet. The coffee shop has indoor-outdoor seating; however, due to the heat she plans to remain inside. The restaurant maintains social distancing protocols and she will only remove her mask periodically to eat/drink food as needed.",4
+153,"A girl with a rare genetic disorder stays at home with her parents and sister, and they only go grocery shopping each week and all double mask. She does virtual school, as does her sister, and her parents work from home. ",1
+154,A 38 year old man goes to an outdoor gathering with 4 friends. He wears a mask but no one else does and there is social distancing,3
+155,"Jessica Day, a 32 year old elementary school teacher shares a loft with 5 other people. Everyone social distances and keep masks on while in the apartment.",1
+156,A 31 year old plumber replaces the sink in a studio apartment while the two occupants are still in it. The repair takes him 15 minutes and everyone wears a mask the entire time. ,2
+157,"A 24-year-old man would like to host a barbeque with neighbors at his house. He plans to have several neighboring families over (~10 adults, 5 children) and everyone will remain outside with the exception of using the restroom. No one will be wearing masks after they arrive, however there is spacious yard for social distancing. The man has asthma and several of the neighbors are in their 60s.",5
+158,"A 35 year old woman with severe asthma does indoor dining at a local Italian restaurant with her best friend. They wear masks before and after the meal, but not during, but are socially distanced from other patrons. ",5
+159,A 48 year old postal worker wears a mask while working but sometimes comes into contact with people while delivering mail. They are frequently unmasked. ,3
+160,A 44 year old goes to a university café to order some breakfast. None of the student patrons wear masks but the barrista does. The 44 year old wears a fitted N-95 mask. ,3
+161,A 67 year old college Professor teaches an in person course. Everyone wears a mask and socially distances.,1
+162,A 25 year old man attends a work meeting with 10 other employees. They eat lunch together in a room but everyone is 6 feet apart. ,6
+163,"A 60 year old woman works from home and sees no one except her daughter who does not live at home but follows strict COVID-19 guidelines, she does curbside pick up for groceries. ",1
+164,A 19 year old car mechanic speaks to a cutomer outside in the sunshine where neither of them wear a mask but stand 8 feet apart from each other. ,2
+165,"A 45 year old janitor sweeps the hallways of an apartment complex he works at. None of the residents wear masks when passing him in the hallway, but he wears an N-95 mask. ",2
+166,A 13 year old girl quarantines at home with her parents. The only person who leaves the house is her father to get groceries one time per week. He wears a mask and stays 6 feet away from others.,1
+167,A 22 year old college student would like to go to a beach party with their friends. The party will be in the open air with direct sunlight. Masks are not required. Drinks and food will be provided and served in a shared family meal context.  ,4
+168,"In the summer, a 51 year old male smoker went to a barbeque party with more than ten people. Everyone wore a mask, except while eating food and drinking. Social distancing was not practiced.",6
+169,A 69 year old man with diabetes goes to an indoor party where people are wearing masks but not socially distancing.,4
+170,"A 27 year old woman takes her dog to the dog park on a cold winter day where there are 30 other dog owners, most of whom wear a mask but who stay 6 feet away from each other. ",3
+171,A 41 year old ski instructor operates a lift at a major ski resort. He is within  20 feet of hundreds of people each day most of whom wear masks but not all of them. He has pancreatic cancer. ,2
+172,A 74 year old geologist works brushing off fossils outside at a dig site with his grad students who always wear a mask around him and give him 10 feet of space.,1
+173,"A 15-year-old girl went to a pool party with three friends who she regularly sees because they play volleyball together. None of them wore masks or socially distanced, and ate food during the event. They all regularly are tested for COVID.",5
+174,A 23-year-old plans on attending church.  Some of her fellow worshipers wear masks though many do not.  The church is large and airy but pews are not 6 feet apart.  The congregation begins each service by singing hymns.,5
+175,A 20 year old man sits outside a campfire with 5 other friends. They do not wear masks or socially distance.,6
+176,"An astronomer goes to Argentina to look through the newest telescope NASA has built. His friend celebrates his 38th birthday while he is there so they share cake and champagne in a small room together, the friend usually socially distances and wears a mask. ",2
+177,A 40-year-old and her two daughters are visiting her mother for the weekend.  She experienced flu-like symptoms 2 weeks ago but it has been 10 days since she felt ill.  She will wear a mask and stay 6ft from her mother but her daughters will not be wearing masks and will be in close contact with their grandmother.,6
+178,A 25 year old woman works in an apartment complex as a leasing agent and regularly gives tours of units to prospective residents. She wears a mask and so do the prospective tenants. ,2
+179,"A 37 year old florist delivers flower arrangements to customers who order online. She has high blood pressure and wears a mask and works alone, and does contactless dropoff. ",1
+180,A 17 year old female who was wearing a mask goes skateboarding with three friends who have recently had contact with people with COVID-19 and do not wear masks. ,5
+181,A 73 year old obese man goes to the mall. Everyone he interacts with is wearing a mask but no one is social distancing.,4
+182,A middle-aged man who has a cold and who has a mask went climbing with three other people. The others were wearing a mask. Social distancing was practiced.,1
+183,A 28 year old cares for her mother who has contracted COVID-19. She brings her mom food 3 times a day. Both wear face masks when in the same room. ,5
+184,A 65 year old doctor with COPD works on patients. SHe wears a mask but no one else does and there is no social distancing.,6
+185,A 53-year-old woman living in a rural area goes to the hairdresser every week.  There are usually 4-6 other ladies there none of whom wear masks.  She is overweight and smokes cigarettes regularly.,6
+186,"A 19 year old girl goes to the grocery store without a mask, she can't maintain social distancing and its peak busy hours. ",3
+187,An 8 month old baby is cared for by a woman with COVID-19. The woman rountinely sneezes and does not wear a mask when interacting with the baby.,6
+188,A 88 year old male who was wearing a mask goes to get a hair cut at the local barbershop. His barber wears a mask during the 30 minute haircut.,3
+189,Augustine Berch goes Ice skating with her boyfriend for an hour. Both of them wear masks and try to stay 6 feet from other skaters but nobody else wears masks. ,3
+190,"A 50 year old man with gambling addictions went to Trader Joes with 4 friends, everyone wore masks but it was peak busy hours. ",4
+191,A 19 year old man goes to the skate park with his friends where none of them wear masks and they rountinely get within 6 feet of many strangers. ,5
+192,A 26 year old goes to the grocery store. She wears a mask and socially distances.,2
+193,"A 34 year old woman is a nanny. She watches the same two children each day, who quarantine at home. No one wears a mask. She comes into contact with the two parents, who do not wear a mask and work outside the home.",3
+194,A 16 year old boy goes to highschool and wears a mask. He also play football after school during which he also wears a mask at all times. ,3
+195,A 16 year old boy goes car shopping outside with his father. They interact with 3 other people and everyone wears masks but does not socially distance.,3
+196,A 27 year old investment banker works from home but sees friends socially on the weekend. They do not wear masks but have a pod together. ,2
+197,A 24 year old sits on her balcony and smokes cigarettes with 4 of her closest friends. No one observes social distance and no masks are worn. ,6
+198,"A 33 year old police officer arrests a suspect. The police officer is healthy and wearing a mask, but the suspect is not it is unknown whether they have COVID-19 or not.",3
+199,"A 14 year old goes on his best friend's yacht with his family and does not wear a mask. They spend the day eating snacks and swimming, with no social distancing. ",5
+200,"A 57 year old dentist wears a mask while working, but his patients do not in order for him to do check-ups. All employees of his clinic are masked and they limit the number of people in the waiting room. ",5
+201,"A 42 year old man goes to the arcade with his kinds, All of the adults at the arcade wear masks but none of the children do who regularly break social distance. ",5
+202,A 45 year old man with liver cirrhosis went to the grocery store. Everyone was wearing a mask and maintaining social distancing.,2
+203,"A 28 year old is a server at a popular restaurant in a big city, where patrons regularly pack in at the front desk to get a table. All patrons once seated are socially distanced. He wears a mask while serving patrons. ",6
+204,"A 8 year old girl goes to horseback riding lessons outside, but goes inside to the stables to take care of the horses after her lessons. She does not wear a mask the entire time and neither does her instructor. ",2
+205,"A woman Is acting in a tv show that being shot outside on a veranda, there are 3 actors involved who all stay 6 feet apart from each other and do not wear masks. The woman is 34 years old. ",3
+206,A 50 year old woman is a lead ER doctor and has been tending to COVID patients for the past year. She lives with an immunocompromised daughter who is 14 years old. ,6
+207,A 90 year old Grandpa with esophageal cancer is visited by her grand daughter at her home. The grand daughter practices safe COVID-19 rules at all times and sits 10 feet from her. ,1
+208,A 25 year old woman goes for an outdoor walk with one friend. They socially distance but do not wear masks.,2
+209,A 58 year old man with a blood disorder helps his brother move. Neither one socially distances or wears masks.,5
+210,"A 40 year old nanny for a wealthy family does not wear a mask while working with the family, and neither does the family she works with. She is tested, along with the family, every two weeks.",3
+211,A 14 year old boy goes to a game stop to buy a PS5. He and all other patrons wear masks during their shopping time and none of them get within 6 feet of each other. ,1
+212,A 38-year-old invited a friend from college over for dinner.  Neither were wearing masks.  2 days after the dinner he learns that his friend's wife has tested positive for COVID-19 despite being asymptomatic.,6
+213,"A 16-year-old is learning to drive.  He is in the car with his father and younger sister, none of whom are wearing masks.  They drive to a drive-thru for ice-cream where the clerk is wearing a mask.",1
+214,An 80 year old man stays at home with 8 close family members. Everyone works from home and no one sees people outside the household. ,1
+215,A 66 year old woman with heart failure went to an outdoor restaurant with two friends. Everyone maintained social distancing but no one wore masks.,4
+216,A 87 year old male who was not wearing a mask went for a walk in his neighborhood away from all other people.,1
+217,"A 48 year old chef wears a mask while working at his restaurant with his ten other staff members. Patrons do not wear masks while eating, but tables are socially distanced and outside. ",3
+218,A 30 year old yoga teacher leads a class at her local yoga studio. All of her students wear masks but they are all in a relavitely small room without good ventilation. ,5
+219,"A 22 year old woman flies on an airplane. She wears a mask the entire time and stays 6 feet apart from others, who are also wearing masks.",3
+220,A 9 year old girl swims in the river with her parents who work from home. They don't get within 50 feet of any other people while swimming. ,1
+221,A 45 year old carpenter wearing a mask replaces a windown in the apartment of two 22 year olds who are also wearing masks. ,2
+222,"Two 24 year olds live in an apartment complex where other residents regularly don't wear masks in hall ways, however they wear masks in shared spaces and hallways. ",3
+223,A 24 year old goes rock climbiing at an indoor gym with 2 of his friends. They all wear masks while inside the gym. ,2
+224,A nuclear power plant engineer clocks into work everyday at 8am for his 12 hour shift. He isolates from all other employees whe possible and wears a mask and social distances when he needs help completing a task. ,1
+225,"An 8 year old child takes a 1 hour flight from Miami to Cuba, she wears her mask for the entire flight which is only half full. ",2
+226,A middle-aged man went tubing with six other people. The group did not wear masks and drank beverages while on the river. Social distancing was practiced.,2
+227,A 90 year old former business magnate orders a hot dog from a street vender in New York city at rush hour. He eats it on the corner where those without masks routinely get within 6 feet of him,4
+228,"A young boy who has sickle-cell disease goes to get fast food with his father. They both wear masks when aceepting their food from the window, everyone at the restaurant wears a mask.",2
+229,A 39 year old pregnant woman hosts an outdoor baby shower for 20 attendees. No one socially distances or wears a mask.,5
+230,A 50 year old writer hosts a book club on the lawn of a local park where 10 people attend. All of them sit 10 feet apart from one another but do pass around a tray of food that everyone takes food from. ,3
+231,A 20 year old man goes to an outside picnic table with 3 friends that he doesn't live with. No one wears a mask and everyone is eating. His group stays 6 feet away from others.,2
+232,A 65 year old furniture maker recieves a delivery of supplies at his workshop. He wears a mask when interacting with the delivery men when signing off on the paperwork. ,1
+233,A pediatrician goes to sea world with her daughter. They keep their masks on the entire day and maintain a large distance between them and all other people. ,1
+234,A fitness influencer meets fans outside of a gym on a busy los angeles street. She doesn't wear a mask and only half of the fans interacting with her do when she poses for pictures with them. ,6
+235,A middle aged man sits in a small park in San Francisco. A friend of his comes to say hello and they talk while remaining 6 feet of distance from one another. ,2
+236,A 20 year old goes to party at a club in LA. There are only 5 other people there but nobody wears a mask and the venue is poorly ventilated. ,4
+237,A 2 year old new born is quarantined with its mother who actively has COVID-19 but wears a mask whenever around the baby. ,3
+238,A 97 year old goes his grand daughter's birthday party at Chuck-E-Cheese. Masks were not worn and the space was poorly ventilated. ,6
+239,A congressman in D.C. votes on a new bill in the senate chambers. All of his colleagues wear masks and stay 6 feet away from him. ,2
+240,A 45 year old teacher teaches virtual school for her preschool students. She lives at home with her immunocompromised wife and their daughter who has asthma. They get all their shopping delivered and do not see people. ,1
+241,"A 40 year old SWAT team member leads a raid on a house, they do not wear a mask and none of the other officers do either. They all live separately and do not social distance when out of work.",5
+242,"A 23 year old woman with no previous health issues attends an office party with 20 people in a large, open space. No one is wearing a mask and everyone is eating and drinking. ",5
+243,A 46 year old woman flies on a plane with her young child. She does not wear a mask but she is the only one on the flight.,1
+244,A 60 year old female who was wearing a mask  went to a farmer's market. Social distancing was not practiced but she wore a mask the entire time.,3
+245,An 88 year old man with COPD goes to an indoor church service. He wears a mask but others do not and nobody socially distances. There are 50 people in the room. ,6
+246,"A 72 year old man goes into a bank and is not wearing a mask. Other people inside are wearing a mask, and when asked to put one on he refuses. ",2
+247,A group of young children play tag in a field together. 7 year old Timmy goes to join them and plays tag with a mask on for 35 minutes. None of the other children wear masks or social distance. ,5
+248,A 67 year old woman with health problems goes to a hair salon to get her hair styled. Everyone in the building is subject to temperature checks. People do not socially distance but they wear masks.,4
+249,"A 32-year-old man works at a dry cleaner's and regularly interacts with masked customers. All 8 other employees wear masks while working, but live in multi-generational homes with other individuals who are working in service jobs and are not tested for COVID. ",4
+250,A 34 year old ta preparer with pancreatic cancer sees clients at his office. Everyone is required to wear a mask during the visit and happily sit 8 feet from him during most of the visit.,1
+251,A 9 year old plays outside of her parents house in the dirt. Her father works at a law firm where none of the employees wear masks or social distance. The father comes home and hugs his daughter. ,5
+252,"A 56 year old woman works from home but regularly invites friends over to socially distance enjoy meals together, all of them are smokers.",4
+253,"A 40 year old man with diabetes goes swimming at his local indoor pool. There are four other people present and they wear masks before getting into the pool, and get temperature checks at the door. ",3
+254,A 44 year old man works a 6 hour shift at the home depot where he helps customers with finding the tools they need. He always wears a mask but very few people he interacts with do. ,5
+255,A Middle aged woman goes to the bookstore with a fitted mask and sanitizes her hands afterwards. The trip only takes her 15 minutes. ,2
+256,"A 22 year old girl visits her grandmother in a nursing home. She wears a mask while visiting, but her grandmother does not. They stay in her grandmother's room for the duration of the visit, but when entering and exiting encounters unmasked residents. ",5
+257,"A 65 year old with severe heart disease decides to go for a bender, visiting 5 local pubs and consuming 20 beers over the course of the evening without a mask and hugging many strangers. ",6
+258,A 65 year old woman goes to a nursery to purchase new flowers for her garden. She speaks with an employee in the outdoor nursery and they both wear masks and speak 3 feet apart. ,2
+259,An 89 year old man flies on an airplane. He has chronic asthma. Everyone wears a mask and socially distances from everyone else.,2
+260,London Towney is a judge in North Dakota. She takes cases on her laptop and does not go into the office because of COVID-19. She has all of her groceries contactless delivered to her because she has breast cancer. ,1
+261,An 82 year old woman sees her private trainer for a 30 minute work out 3 times a week. The trainer keeps a distance of 6 feet and wears a mask but they are in a poorly ventilated space. ,5
+262,A six year old goes to kindergarten where no other children wear masks but their teacher does. ,5
+263,A 90 year old stays at home and drinks tea by herself. She has asthma and stage 4 cancer. ,1
+264,"A 40 year old mother attends the super bowl with her three sons, none of them wear masks and are seated 10 feet apart from all other attendees.",2
+265,A 40 man who has cancer and who doesn't care to have a mask on went to the gym. Social distancing was practiced but no one else in the gym wears a mask. ,6
+266,"A lifeguard rescues a drowning swimmer from the ocean.  Once back on shore, the lifeguard performs CPR on the unconscious swimmer.  It is not known whether or not the swimmer as COVID-19.",3
+267,A 64 year old takes a road trip from LA to SF with his 40 year old daughter. Neither wear masks for the trip and she was recently exposed to COVID-19,6
+268,A 14 year old girl goes to math class at school. Everyone wears a mask and socially distances.,6
+269,A 60 year old man with high blood pressure goes to happy hour with his friend who owns a coffee shop and has been working during COVID. They do not wear masks while sitting together. ,6
+270,An 83 year old man goes on an airplane for 5 hours. Everyone wears a mask but no one is social distancing. He has no known health problems.,3
+271,"A 50 year old homeless man asks for food from cars as they wait at a stop light by the highway. He never wears a mask and none of the people he asks for food from do either, he is interacted with by at least 20 people a day. ",3
+272,"Mary-Anne Bishop runs the Boston marathon, she and all other runers make sure to wear masks during the event but do not maintain safe social distancing measurements during the race. ",3
+273,A 21 year old goes to a crowded bar on a Friday night. He is vaccinated against COVID-19. ,1
+274,"A 20 year old nursing student administers vaccines to people. She wears a fitted N-95 mask, face shield, and sanitizes her hands after seeing each patient. Each patient wears a face mask and is within 6 feet of the nurse for less than 30 seconds. ",2
+275,"A 39 year old doctor has no health problems. He works closely with sick patients all day, but it is unknown if they have COVID. Everyone wears a mask.",4
+276,A young man goes horseback riding with his family. The ranch hand who guides them stays 40 feet ahead of them at all times and wears a mask.,1
+277,A group of friends in their 30s plan on attending a protest march outside.  Everyone at the protest is encouraged to wear masks and maintain proper social distancing but inevitably there are a few not properly wearing masks and walking closer than 6 feet apart.  The crowd chants and sings.,2
+278,An older man with COPD stays home alone for an evening of cocktails and watching classic movies alone. ,1
+279,"A 58 year old woman with diabetes goes to a dinner party with her husband, and they see two other couples at the party. They eat outside and socially distance but do not wear masks. ",4
+280,A 66 year old unhealthy woman goes to an outdoor farmer's market. She wears a mask but many people do not and no one is socially distancing.,4
+281,An art history student has dinner with his friend at his apartment. His friend does not socially distance or follow COVID-19 guidelines but they sit 6 feet apart in his living room for the duration of the meal. ,5
+282,"A convention was held inside the ball room of a hotel, ventilation and AC were operational and the event had 100 people attending. All attendees were required to wear a mask.",2
+283,A 98 year old owns a private mansion in the appalachian mountains. They are waited on by a butler who never leaves the premises and only interact with the owner of the house. ,1
+284,A 53 year old woman goes to a busy nightclub for 2 hours. No one is wearing a mask. People are eating and drinking and not social distancing. She has no known health problems.,6
+285,A 22 year old is working as waiter at a restaurant. All tables inside at 10 feet apart and all tables outside are in the sunlight. The waiter keeps their mask on the entire 7 hour shift and frequently washes their hands. None of the guests appear to be sick.  ,4
+286,A 34 year old man stayed at home with 1 other person in winter. Social distancing was not practiced but they share a house hold. ,1
+287,A healthy 8 year old boy plays soccer outside with one person. Neither wear masks or socially distance.,5
+288,"A 40 year old cancer patient goes to a hospital for pain. Everyone is wearing a face shield, even though several get within 6 feet of her. ",4
+289,A 32 year old man goes on the subway with his coworker after working all day at a large corporate office where everyone wore a mask. Everyone on his subway car wears a mask. ,3
+290,A 84 year old female who was wearing a mask went dancing in a crowded New York speak-easy. Social distancing wasn't practiced. ,5
+291,"A set of 10 year old twins went to a sleepaway summer camp. They got tested before going and had temperature checks every day at camp, and had to wear masks for all activities with people not in their cabin. ",4
+292,A 15 year old boy walks to school with his best friend. Both of them wear masks during their 20 minute walk.,2
+293,A 35 year old man works from home but day drinks with 10 of his closest frat brothers every weekend and goes to the gym everyday maskless. ,6
+294,A 39 year old man with no health issues attends a fitness class with 5 other people. No one is wearing a mask. Everyone has temperature checks and remains 6 feet apart.,6
+295,"A 40 year old man attends a ""Salsa in the park"" event. All 50 attendees wear masks but cannot practice correct social distancing during the event.",4
+296,A 32 year old male who was not wearing a mask rode a train with 20 other people. There was poor ventilation and  social distancing was not practiced.,5
+297,A 32 year old woman with no health problems goes to the mall with 3 friends. Everyone wears a mask.,2
+298,"A 11 year old girl with health issues, including cystic fibrosis, watches a baseball game with her family. No one is socially distancing but she wears a mask.",6
+299,A 100 year old woman stays at home and has all of her groceries delivered to her by contactless delivery. ,1
+300,A 40 year old wins the lottery and decides to buy every item in a best buy just because he can. He closely interacts with 5 employees who all wear masks and practice social distancing.,2
+301,A 95 year old sees her children at a large family gathering in an outdoor where everyone wears a mask but does not socially distance. ,5
+302,A homeless shelter offers meals for those in need.  A 55-year-old is volunteering to serve food.  She is wearing a KN-95 mask but few of the homeless citizens in line to eat are wearing a mask.,3
+303,24 year old felix goes to the local pool where there are 15 people swimming. He can always keep a distance of 6 feet but the entrance of the pool makes him get close to a group of people.,3
+304,A 33 year old nurse works in a hospital COVID-19 floor. He must routinely get within 6 feet of those with confirmed COVID-19 cases to administer care. He wears both a fitted N-95 mask and a face-shield ,5
+305,"A 36 year old woman goes on a blind date at an outdoor coffee shop. They do not wear masks and do not socially distance while drinking coffee, but are distanced from other patrons. ",4
+306,A 50 year old woman with COPD goes to the grocery store. Everyone wears a mask but no one is social distancing.,4
+307,A 54 year old man with no health issues works in a construction site outside. No one wears a mask.,2
+308,A maid working at a luxury apartment cleans people's apartments while they are out. She never interacts face to face with the residents but does spend up to an hour in their apartments. ,1
+309,A fruit picker works in a field with 25 other people. He stays 10 feet away from all of his coworkers at all times but does not wear a mask. ,1
+310,A 50 year old court stenographer takes notes during a 3 hour court room hearing. She sits 20 feet from all other persons and wears a face mask. ,1
+311,A 39 year old with no health issues goes skiing with his friend. Both wear masks but do not socially distance.,2
+312,An old woman who has cancer and who doesn't have a mask went on bowling with six other people. The others were not wearing a mask. Social distancing was practiced.,5
+313,"A 23 year old woman with no previous health issues attends an office party with 20 people in a large, open space. No one is wearing a mask and everyone is eating and drinking. ",5
+314,A ferrier tends to horses outdoors all day. His employers leave his pay in an envelope so he never has to get within 100 feet of them. He is 45 and has bone cancer. ,1
+315,"A 100 year old woman with high blood pressure lives in a nursing home. She does not wear a mask and comes into close contact with nurses, who wear masks and do temperature checks.",2
+316,"A 61 year old man went to an exercise class indoors with eight other people, and wore a mask. The others were not wearing a mask. Social distancing was not practiced.",6
+317,A 55 year old male who was not wearing a mask went to the grocery store. Social distancing was not practiced.,3
+318,"A older woman stayed at home during the pandemic because she was afraid of getting sick, and saw no other people. She got food delivered and video chatted all friends and family online.",1
+319,A 56 year old woman lives with her 85 year old mother. The 56 year old doesn't quarantine and never wears masks. She interacts with many different people each day. Her mother has many health problems.,5
+320,A 34 year old woman goes in to work at a technology job in San Francisco where most people do not wear masks properly and regularly eat in the office without a mask.,5
+321,A 22 year old attends an outdoor picknick with 30 of her friends. No one wears masks and everyone sits within very close proximity to eat dinner together. ,6
+322,A 62 year old woman with COPD goes to yoga. There are 12 people in the room. Everyone socially distances and wears masks. ,4
+323,A 88 year old man goes to watch his granddaughter's dance competition indoors. He wears a mask but no many others do not. He maintains social distancing.,4
+324,An 90 year old man lives at home with his grand daughter who works in retail at the mall. She wears a mask all day while at work and santizes her hands after every transaction. The elderly man smokes and has asthma.,2
+325,A 50 year old flight attendant flies from New York to Los Angeles. She does not serve drinks and requires all passengers on the sparsely populated flight to keep their masks on at all times. ,2
+326,A 76 year old woman with multiple health conditions lives in a nursing home where no one else wears a mask but she does. They eat meals together in an open space but live separately.,5
+327,A 62 year old environmental science student studies in the common room at the school library. All students in the common room are wearing masks and practicing social distancing. ,3
+328,A tech worker stays at home and works remotely in San Francisco.,1
+329,"A 74 year old male who was not wearing a mask went to church indoors with 100 other people, masks were not worth. Social distancing was practiced.",6
+330,A 82 year old male who was wearing a mask goes to a packed baseball game with his daughter. Social distancing was not practiced but masks were worn.,6
+331,"A healthy 24 year old shares a 30 minute ride to work with a coworker, who is COVID-19 positive. Neither are wearing a mask.",6
+332,A 90 year old shop keeper rings up and bags groceries for customers in his store everyday. He wears an N-95 mask but comes into close contact with hundreds of mask individuals everyday. ,5
+333,A new mother who has contracted COVID-19 is staying in a hospital isolation room with her new born baby. the mother is displaying noticeable signs of COVID-19 but wears a mask when around the new born child and puts it in an incubator in the room when possible. ,2
+334,A 54 year old man works as a server at a restaurant. No one socially distances but everyone wears a mask.,6
+335,"A 7 year old boy eats lunch in a cafeteria with 100 other children at their elementary school, no child wears a mask and they sit right next to each other at the table ",6
+336,A healthy 71 year old man attends an indoor family gathering with 5 other people. No one wore a mask.,6
+337,"A 93 year old goes for a walk along the river, he passes a few joggers who are all wearing face masks. ",1
+338,A 18 year old girl has a highschool graduation party over zoom. All of her relatives dial in remotely to wish her luck and hang out. ,1
+339,"Three 25 year individuals go to the gym together regularly without masks and talk while the run on the treadmill. Other people in the gym wear masks, they all individually see others without masks socially.",6
+340,A group of musicians rent a house to produce their new album. Some of them have recently been exposed to COVID-19 and do not socially distance or wear maks while inside the house. ,6
+341,A 67 year old goes to the beach. He sits far away from all other people in the sunshine and does not wear a mask. ,1
+342,"A 16 year old goes to a sleepover with her 6 close friends and none of them wear masks. They sleep in the same room and spend two days together, regularly sharing beverages. One felt sick a few days prior. ",6
+343,A 57-year-old with COPD is going for a walk around his neighborhood.  He wears a mask and is vigilant about staying at least 6ft away from other people.,1
+344,A 50 year old smoker with no other health ailments attends a family holiday with 5 people outside of his household.,6
+345,A 99 year old goes to ruby's to pick up some BBQ. She wears a mask during her visit to the restaurant which only takes 15 minutes and all other patrons wear masks.,2
+346,"A 38 year old executive chef at a restaurant is allowing indoor dining, all tables are 6 feet apart and all employees wear masks at all times. He never gets within 15 feet of a customer.",4
+347,A 40 year old works at a dog washing business. She washes 10 dogs a day without a mask on but always keeps safe social distancing from the pet's owners.,2
+348,A 30 year old electrian goes to work at a Job site building the new Facebook building in downtown Chicago. He has an assistant who helps him throughout the day. The assistant regularly goes out to party without a mask and does not wear a mask at the job site. ,5
+349,A 38 year old goes to the local river to swim where he does not wear a mask but stays more than 20 feet away from any other person. ,1
+350,Patrice Winnebego is a star hockey player but loves to bake. After his team can't play because of COVID-19 he opens a bakery in downtown los Angeles. All patrons must wear a mask to purchase any goods from him and he wears a fitted N-95 mask,2
+351,"A 19 year old attends a family gathering outdoors where some of your relatives are not wearing masks, they will generally remain 6 feet away from others. The 19 year old  will remove their mask to eat dinner outside. The relatives, mask wearing and not mask wearing will hug them and break the social distance often.  ",6
+352,A 10 year old girl with asthma goes to the grocery store with her mother. Everyone wears a mask and maintains social distancing.,4
+353,A 19 year old volunteers at a rare bird nature preserve in Colorado where she only interacts with her direct supervisor and they both wear masks. ,1
+354,"A 10 year old participates in a water polo game, outisde of the pool all participants wear a mask and socially distance but in the water no social distancing or masks are used. ",2
+355,A 88 year old father goes to Visit his daughter who is sick at the hospital with COVID-19. The Father wears an N-95 mask and stays well away from his daughter during the visit but interacts with 2 docotrs who are also wearing PPE. ,3
+356,"A rug maker works in her shop all day, she only takes in rugs from contactless delivery and never interacts face to face with other people. She is 57 years old and has mild hyper tension.",1
+357,A 87 year old male who was not wearing a mask and went for a walk to the local dog park to play with stranger's dogs.,2
+358,A 40 year old takes a job in a meat packing facility where he spends 40 hours a week indoors with poor circulation and routinely coming into close contact with others. ,5
+359,A group of five 20 year olds go to the park and have beverages and snacks in the sun on a Saturday afternoon. They do not socially distance or wear masks. ,5
+360,A 37 year old couple goes to a local bar for cocktails. They sit at the bar and remove their masks for the duration of their meeting. The bar has high ceiling and good ventilation but many people without masks get within 6 feet of them ,6
+361,A 18 year old girl works at a fast food restaurant where she wears a mask while at work and is regularly temperature checked with her other employees. Many patrons do not wear masks when going through the drive thru. ,2
+362,A 48 year old chain smoker and alcoholic lives alone but regularly sees his poker group on Thursday nights where they are unmasked. ,6
+363,"A 60 yeah old father with a broken hips stays home while his wife grocery shops for him, she wears a mask whenever she goes to the store for him and doesn’t see other people. ",2
+364,A 98 year old goes to the local flower shop to purchase a bouquet. All the flowers are on display outside and the 90 year old is able to leave her payment on a table without getting within 6 feet of the attendant. ,1
+365,"a 29 year old man goes day drinking with his buddies from college. They don't wear masks the whole day when are seated, but do between bars. They spend the whole day together and regularly share drinks. ",6
+366,An 87 year old woman has diabetes and she goes to dinner with 3 other people at a crowded restaurant. No one wears a mask or socially distances.,6
+367,"A 27 year old Bit-Coin millionaire enjoys a vacation in Italy, they have leased a mansion for the next year and only interact with the house's cleaning staff. ",1
+368,A 38 year old man works at a busy marketing firm in New York City where he must go into the office 5 days a week. All of his co-workers wear masks during the 8 hour work day but they work in close proximity to each other. ,3
+369,A 51 year old professor teaches classes online for their university. They host all activities online and do not leave the house except to exercise and pick up food. ,1
+370,A 25 year old robotics graduate student at M.I.T. works on aproject outside with his classmates who all wear masks while within 6 feet of each other,1
+371,A 29 year old works at a grocery store where all employees wear masks and so do patrons. However they do not enforce a capacity and people do not socially distance while shopping or checking out. ,3
+372,"A group of 10 year olds go on a bike ride around their neighborhood together, none of them wear masks and they stay far apart from each other on the ride. ",1
+373,A 13 year old boy attends middle school. All his classmates wear face masks but don't practice social distancing. ,5
+374,A 17 year old young woman works at a McDonalds Drive through. She accepts payments and does a temperature temp before entering work everyday. She wears a mask at work everyday. ,3
+375,"A girl by the age of 19 went to a crowded zoo on a hot summer day, no one was social distancing or wearing masks.",5
+376,An 18 year old favor picks up food from a crowded restaurant that is offering indoor dining before delivering the food contactless to a densely populated apartment complex.  ,5
+377,A healthy 22 year old teacher teaches a classroom full of students. Everyone wears a mask but she is unable to socially distance.,3
+378,"A landscaper works outside all day by himself, he tends to the weeds and cuts the grass at a large estate. He sees no one all day and eats lunch by himself. ",1
+379,A 17 year old girl goes to a public outdoor pool where there are 100 other people. Everyone stays a minnimum of 6 feet from each other but no one wears a mask. ,4
+380,A 43 year old healthy woman goes to lunch with three other women. They sit outside and do not socially distance or wear a mask.,5
+381,A 66 year old man works as a tax preparer for his day job. He works with one assistant who wears a mask the entire time they are together and who practices social distancing. ,1
+382,A young boy who has diabetes and has a mask on went on climbing with four other people. The others were wearing a mask. Social distancing was practiced.,1
+383,A 73 year old goes to work as a bank teller. He has a plastic barricade between him and all customers and all parties wear face masks.,1
+384,A 30 year old hosts a rooftop party at her apartment. She invites the entire building of 100 people and nobody wears a mask. Everyone mingles and drinks together for 2 hours. ,6
+385,A 68 year old man has his Grandson over to play chess. Both parties wear N-95 masks during their hour of game time and sit 6 feet apart from each other. ,1
+386,A 17 year old college freshman takes the city bus to get to one of his classes. Half of the people on the bus wear masks but half do not.,5
+387,"A 20 year old female is a nanny at a large city for two foreign 5 year olds, she picks them up from crowded pre school, takes them on public transportation to the park, then brings them to their parents house. She lives with 4 other people in a small apartment. ",5
+388,A 58 year old man works at a hot dog stand. He wears a mask all day and requires all his customers wear masks to interact with him. He has asthma and bone cancer. ,3
+389,A 90 year old woman in a retirement home does not wear a mask and neither do the other patrons. She is diagnosed with cancer and regularly has to go to the hospital for check-ups. ,6
+390,A 75 year old tailor takes measurements of a 22 year old who currently has COVID-19 and is sneazing. Both wear masks during the fitting which takes 25 minutes. ,4
+391,A 28 year old couple waits in a long line in New York city to get a taste of their first cronut. Everyone in the line stays 6 feet apart and wears a mask. ,2
+392,A 19 year old professional gamer stays at home all day and has all of his meals contactless delivery.,1
+393,"A 10 year old participates in a water polo game, outisde of the pool all participants wear a mask and socially distance but in the water no social distancing or masks are used. ",4
+394,A 71 year old man with COPD goes to watch his grandson's football game outside. He sits in a crowd where everyone is wearing a mask but no one is social distancing.,4
+395,A technician at a server farm in Virginia wires together a new stack for Amazon. He works alone for 6 hours a day. ,1
+396,"A 52 year old  janitor with lung cancer works for a start up company disinfecting and cleaning the office once a week after hours. The company office is well ventilated and all personnel have left the building 2 hours prior to the janitors arrival. The janitor’s job is to disinfect, sweep, clean up any food waste /garbage in the building, and mop.  ",1
+397,A pair of 20 year olds go on a date to a coffee shop where they go inside to order coffee and pastries. They sit out on the patio where there are 10 other people dining who are situated a comfortable distance of 5-10 feet away from them. ,2
+398,A 77 year old car mechanic speaks to a client outside in the open air without a mask. The car's owner wears an N-95 during the entire interaction. ,1
+399,A 52-year-old wants to take his wife out to dinner.  The restaurants in his town are open for outdoor seating.  It is a cool night and the outdoor seating section has a plastic covering and heaters inside.  All of the tables are 6 feet apart but other diners are not wearing masks while eating and drinking.,6
+400,"A 26 year old works in a hair salon and wears masks while with her clients, but not while in the breakroom with the other stylists at the salon. She lives with an immunocompromised parent. ",4
+401,A dry cleaning shop offers contactless pick up and delivery because the elderly man who runs it has been diagnosed with Diabetes. He always wears a mask and requires all drops off to be left of a table outside the store. ,1
+402,A 22 year old works at a bakery selling pastries on a Sunday morning. She wears a mask during her shift and all customers do the same. ,2
+403,"A 27 year old goes to the pool at a local apartment complex. Only two other people are at the pool, both of who stay 20 feet away. ",1
+404,A 36-year-old pregnant woman needs to go to her doctor's office for a routine pre-natal check-up.  She plans to travel to and from the doctor's office by taxi.  She and everyone she comes in contact with will be wearing a mask.,4
+405,A 49 year old man with diabetes goes to the gym. He socially distances but does not wear a mask.,6
+406,"A 20 year old barrista works at a local coffee shop during rush hours, where she serves 250 drinks to customers. Most of the customers wear masks but 20 of them refused to and got within 6 feet of her while placing their order. ",3
+407,A 41 year old man with asthma does not socially distance or wear a mask. He works in a small office with 4 other people.,5
+408,A 76 year old plays bocce ball at the park with his 24 year old great nephew. They stay 6 feet apart during the entire game. ,2
+409,"A 20 year old homeless man went to the homeless shelter on a hot summer day, everyone was social distancing and wearing masks.",1
+410,"A 27-year-old woman is a bartender and wears a mask at work but serves unmasked patrons all day. They are socially distanced from her, but not one another. ",3
+411,A pregnant 40 year old woman goes grocery shopping. Everyone is wearing a mask but no one is social distancing.,3
+412,"A 35-year-old woman plans to host a book club meeting at a local coffee café. They plan to grab coffee and lunch while at the café and eat at the outside dining area, where tables comply with social distancing standards. Typically, 5-7 individuals attend the book club, from all different households. The group wears masks while discussing the book that they are all reading.",5
+413,A 32 year old woman goes to work in a large indoor office. Everyone socially distances but no one wears masks.,3
+414,A 30 year old dentist with no health issues works on patients. He wears a mask but no one else does and there is no social distancing.,3
+415,A 23 year old man goes to work at McDonalds. He wears a mask but is unable to socially distance from his 10 coworkers.,3
+416,A 69 year old man plays tennis with his partner. Social distancing is practiced during the entire outdoor game.,1
+417,A 19 year old works at six flags as a roller coaster operator. He wears a mask for his entire shift but hundreds of people who all wear masks walk within 20 feet of him for 6 hours. He has no known medical conditions,2
+418,"A 18 year old boy lives in a multi-generational home with his grandmother, who has cancer. He works at a large store and wears a mask, but not all patrons do. ",5
+419,A 26 year old leads a boy scout expedition camping. He is in charge of 25 children from separate families who all remove their masks for the entire trip and regularly interact with him,4
+420,An 18 year old boy with cerebral palsey sits in the park and eats lunch with his friends who all sit 15 feet from him in the sunshine. ,1
+421,"A 60 year old football coach is attending his team's game at the local stadium. None of the players wear masks while competing but he wears one, he regularly comes into close contact with his players. ",5
+422,"Maxine Goodfellow, a 17 year old girl, goes to her school's highschool dance. Everybody wears masks but does not social distance for the entire event. ",5
+423,A fitness coach working at Orange fitness has one on one sessions with 4 of her clients. All of her clients wear masks for each of their 1 hour sessions and stay 6 feet away from her. The gym is small and poorly ventilated. ,3
+424,"A 55 year old woman goes to work at a large bank in New York City. She wears a mask while at work, but not everyone else does. Her desk is not socially distanced from the rest of her team. ",4
+425,An older man with COPD goes to get some ice cream from the local shop. He places his order outside and does his transaction with the business through a plastic shileld while wearing a mask.,1
+426,"A 33 year old actress is working on a movie, masks are worn at all times while on stage and social distancing is observed. All takes are done without masks and without social distancing. ",3
+427,a 74 year old man goes to the supermarket without a mask. No one else wears a mask or practices social distancing.,5
+428,"A 15 year old student tutors middle schoolers in his free time. He goes to their houses for 1 hour twice a week, all parties wear masks and sit at the same table together.",3
+429,A 12 year old boy plays soccer outside with 3 friends. No one socially distances or wears masks.,3
+430,A mathematics professor teaches a class at the local university. His class of 20 students all wear masks but sit within 6 feet of each other for the entire 90 minute class. ,3
+431,"A 65 year old optometrist sees patients at his office on a Tuesday afternoon. He sees 10 patients in a day all of whom wear masks but are in the waiting room of his office for about an hour, he must routinely touch their faces to get their perscriptions. ",3
+432,A 9 year old girl plays in the park with her two sisters. All three are homeschool and do not see anyone outside their household. Both parents work from home. ,1
+433,A 63 year old man went to the doctor's office. He has significant health problems. He wore a mask and all of the doctors wore face shields.,2
+434,A 23 year old woman goes to a busy nightclub. No one wears a mask or socially distances.,5
+435,"A 62-year-old woman is planning a retirement party at their house for her husband, who is 66. They will invite over only immediate family, and several collogues to celebrate (14 people in total).  They plan to have a variety of finger food and dips for everyone and will have the celebration in their living room. The man is retiring because of health issues, which include a back injury which occurred several years prior and due to respiratory issues (mesothelioma) that resulted from exposure to asbestos. While eating they will not be wearing masks",6
+436,A middle aged man with diabetes goes for a run in neighborhood alone.  ,1
+437,"A 9 year old boy plays with his friend at the playground, his friends parents rountinely go out without masks and do not pracice social distancing ever. The two boys wrestle and don't wear masks when they play.",4
+438,A janitor at the local hospital disinfects patients rooms of COVID-19 patients after they have been released from the hospital. He wears a fitted N-95 mask and practices social distancing. ,2
+439,A 31 year old healthy woman goes to work and sits in a small room with two other people. No one is socially distancing and no one is wearing a mask.,5
+440,"A 20 year old college student goes to a frat party with forty people present. They all get tested every week and recently tested positive, and do not wear masks at the party. ",6
+441,A 52 year old man goes to a farmer's market. It is crowded and no one is socially distancing. Everyone wears masks.,1
+442,A 16 year old boy with no previous health issues rides the school bus with a 3 foot distance between his nearest neighbor. Everyone is wearing a mask and there are 12 people on this bus. ,2
+443,The leader of a think tank in Washington D.C. invites 25 of their collaborators over to his house for dinner. They all share dinner together without masks. The host is 40 year old.,6
+444,A 40 year old with diabetes goes kayaking on the lake by himself. ,1
+445,"Two twenty four year olds who live together go to a drive-in movie theater. They only encounter the person who takes their tickets, and wear masks while talking to him from their car window. ",1
+446,A 57 year old musician goes to a studio with 4 of his band mates who do not live with him. They work together in a room for 1 hour without masks and poor ventilation. ,6
+447,A 38 year old man goes to work each day in a small office space with the same 7 people. He gets weekly COVID-19 testing but isn't sure whether his colleagues do the same. ,4
+448,A 31 year old graduate student takes virtual classes and sees her boyfriend without a mask regularly. They get take out from restaurants regularly but don't socialize with other people.  ,1
+449,A 50 year old goes to her favorite Italian restaurant on a busy Friday night with a few friends from out of town. They don't practice social distancing or wear face masks while at the restaurant.,6
+450,"A 42 year old man picks his son up from daycare. He interacts closely with two teachers, who are wearing masks. He does not wear a mask.",1
+451,"A 28 year old man does not wear a mask while at his apartment complex gym, but the other 5 people in the gym do. They are socially distanced from one another. ",2
+452,The front desk nurse at a hospital in central Texas checks in a man who has a confirmed case of COVID-19. She keeps 6 feet of distance from him and wears a surgical mask. ,5
+453,A museum curator works in person 5 days a week masked with few patrons attending the museum. She has chronic asthma and diabetes. ,3
+454,A 17 year old girl attends a one direction concert at a stadium event. She wears a mask but many of those who are crowded shoulder to shoulder with her do not. ,6
+455,100 extended family members got together for a family reunion at a bed and breakfast in a rural town. None wore masks and were not tested for COVID before the event and did not socially distance. ,6
+456,An obese 56 year old man with several health issues goes to a crowded bar. No one socially distances or wears masks.,6
+457,A 12 year old boy attends the Macy's day parade in New York city. He doesn't wear a mask but 90% of the crowd does. He has severe asthma.,5
+458,A zoo keeper in charge of the tigers at the San Diego zoo walks throught a crowd who is viewing the animals. He wears a mask but has to get very close to 10 guests in the encounter. ,3
+459,"A 17 year old boy takes the school bus to school, he and all the other children wear masks during the ride but sit very close together for the 30 minute ride.",3
+460,An 29 year old woman with diabetes goes skiing with 4 friends. Everyone wears masks and socially distances.,1
+461,A large department store employs 43 year old John Mills. John is given an N-95 mask and works an 8 hour shift 5 days a week. He often gets within 6 feet of his customers to ring up their clothes. ,3
+462,A 30 year old mother takes her two sons to the beach to go clamming. They are in a pod together and see no other people while they are out. ,1
+463,A 13 year old goes to theater rehearsals at her local theater with 40 other children her age. They all wear masks and get temperature checks before entering. They do not socially distance while at rehearsal. ,3
+464,A 38-year-old couple have a 4-year-old who attends preschool with 10 other children.  None of the children wear masks during the day.  Parents wear masks when picking-up or dropping-off their kids.,5
+465,A 14 year old attends a cello concert in a small studio with 25 other people. Everyone is wearing a mask but 6 feet of distance is not observed.,3
+466,At the Domincan resort in Florida a man orders food and sits outside on the patio at a crowded restaurant. He has brain cancer and asthma but sits 6 feet apart from all other people. ,5
+467,"A 43 year old tailor works in his shop all day. He only fits customers for clothes who wear a mask, pass a temperature test, and show no signs of COVID-19.",3
+468,"A 7 year old gets separated from his mother in the grocery store. He wanders around and interacts with multiple people after he removes his mask, everyone he interacts with wears a mask.",2
+469,An American takes a trip down to mexico for his 50th birthday where he spends the days surfing and eating at nice restaurants in the open air near large crowds of people who don't wear a mask. ,5
+470,A 36 year old man goes to the gym by himself. There are other people in the gym but everyone socially distances. No one wears masks.,4
+471,A gardener at the local conservatory of flowers tends to all the plants in the green house. He is 45 years old and wears a mask during his entire shift but regularly comes into close contact with 100+ people everyday. ,5
+472,"A 45 year old woman is a high school teacher and teaches in person classes throughout the week, all her students wear wear masks but do not respect social distancing. ",3
+473,"A 30 year old gets a COVID-19 vaccine at a drive through vaccination site, the nurse who administers the vaccines wears a fitted N-95 mask. ",1
+474,A 30 year old gets married and has a wedding with 30 people in attendance. Everyone except the wedding party wears a mask and all get COVID tested beforehand. ,5
+475,A 44 year old plans on attending a work meeting at their company. Masks are provided and required to attend the meeting. The meeting will be held indoors with an attendance of around 12 people sitting at a single conference table. All parties understand the rule of 6 feet and will inevitably break the rule in order to traverse the buildings corridors. ,3
+476,"A 30 year old cheese maker in San Francisco man's their shop in the Ferry building, hundreds of people pass through the building each day, most of whom wear masks. He has to interact with one man for 5 miinutes who was coughing and not wearing a mask to make a sale.",4
+477,A 19 year old nurse tends to a 30 year old woman who has just had her appendix removed hours before hand. The nurse has worn a fitted N-95 at all times when around patients but the 30 year old woman does not wear any mask. ,4
+478,A 19 year old goes to the grocery store wearing a mask. She remains 6 feet away from everyone else. She has no prior health problems. ,2
+479,A 95 year old female who was not wearing a mask and went to the gym. Social distancing was practiced.,6
+480,"A 10 year old goes on a road trip with his parents to Yosemite, boths parents work from home remotely. ",1
+481,A long distance trucker with diabetes goes into a gas station to buy food. He does not wear a mask but the clerk is. ,2
+482,Ashley Maquiette is a flight attendent for Qatar airways. She keeps her mask on for the entire duration of the flight from London to Dubai. All of the passengers on the plane keep their masks on the entire flight. ,2
+483,"A 32 year old woman without a mask goes to a spa where she is in close proximity to one person, who is wearing a mask. Everyone had temperature checks and no fevers.",2
+484,A 58 year old man with cancer went to a crowded indoor church service. No one wore masks.,6
+485,"The 57 year old manager of a hedge fund flies In a private plane to Florida, the only person who shares the plane with him is his pilot and wife.",1
+486,A 25 year old sits in traffic on the highway. His AC is broken so he leaves his windows open in the bumper to bumper stalled traffic. Nobody else of the highway has their windows open.,1
+487,A 87 year old woman with diabetes and high blood pressure goes to an indoor family holiday party. She wears a mask but others do not and there is no social distancing.,6
+488,A 22 year old goes to the park to celebrate the birthday of one of her friends. She sits at a table with no mask with 6 other people who she does not live with for two hours in the sunlight. ,6
+489,"A group of college physics majors are working on the large hadron collider in Switzerland. They all wear masks and social distance well, the building they work in is 8 stories high and is well ventilated. ",1
+490,"A 28 year old Professor invites her student to her house for dinner, no one wears a mask during thr 3 hour event and they all sit close together in her dining room ",5
+491,A 16 year old boy plays basketball with 9 other people. All have had temperature checks but no one is wearing a mask.,4
+492,A 38 year old woman with a liver condition goes on a 6 hour road trip with her husband and child to the beach. They stay at an Air BnB alone and do not go to any establishments except the grocery store and beach. They wear masks. ,2
+493,A 57 year old piano teacher teaches piano lessons. She does not socially distance but everyone wears a mask.,3
+494,The sommelier at a 3 star restaurant serves wine to customers who are eating dinner. He is in his mid-30s and wears a mask but regularly gets within 6 feet of maskless customers whom he is serving. ,6
+495,A 82 year old man rides a bus. Everyone socially distances and wears masks.,2
+496,A 52 year old man with diabetes went to an outdoor farmer's market with 4 friends. Everyone was wearing a mask but no one was social distancing.,4
+497,A 55 year old carpenter restores the bottom floor of an apartment complex which has been destroyed by a flood. He works with one other person who is 24 and often goes out. ,5
+498,A 21 year old came into close contact for 15 minutes with a person who has been confirmed to have COVID-19 2 days ago. Neither person was wearing a mask during their encounter. The 21 year old is not displaying symptoms and feels healthy. The 21 year old wants to go to a bar for the evening and dance with friends where everyone will not be wearing masks and will not observe the 6 feet of social distancing.  ,6
+499,"A 15 year old boy went to the gym, where ten other people were also exercising. Everyone wore a mask. Social distancing was not practiced.",4
+500,A 58 year old woman with blood clots goes to eat lunch in a hospital cafeteria by herself. Everyone was wearing a mask and social distancing.,1
+501,"A 27 year old massage therapist gives 4 massages in a day, all of the clients wear masks during their 1 hour visits but 6 feet of distance is not maintaned. ",3
+502,A group of 4 friends go sailing in the San Francisco bay. None of them wear masks during the adventure and none of them practice social distancing on their own. ,4
+503,Maximillian Lovelace goes to a tap dancing class at his university. He is overweight but wears a fitted mask for the entire duration of the class which has 10 other students. ,5
+504,A 40 year old gas station attendant pumps gas for people at the local gas station. He gets within 6 feet of people to accept payments and always wears a mask.,2
