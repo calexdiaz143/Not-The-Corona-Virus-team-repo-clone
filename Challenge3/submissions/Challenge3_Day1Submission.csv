@@ -1,0 +1,21 @@
+ID,hp_start,hp_decline_rate,remdesivir,hp_final,bed,ventilator,oxygen mask
+20,20,-80,1,5,True,True,
+15,39,-89,1,15,True,True,
+14,28,-67,1,26,True,True,
+8,45,-65,0,45,True,True,
+13,55,-68,0,52,True,True,
+11,60,-62,0,63,True,True,
+5,33,-30,0,68,True,True,
+10,95,-88,0,72,True,True,
+9,100,-79,0,86,True,True,
+4,55,-25,0,95,True,True,
+7,90,-60,0,55,True,,True
+6,89,-50,0,64,True,,True
+12,72,-18,0,79,True,,True
+3,65,-7,0,83,True,,True
+19,88,-25,0,88,True,,True
+2,75,-1,0,99,True,,True
+16,91,-13,0,103,True,,True
+17,95,-7,0,113,True,,True
+18,99,-1,0,123,True,,True
+1,100,-1,0,124,True,,True
