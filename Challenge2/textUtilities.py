@@ -24,11 +24,11 @@ def textToDataFrame(text, delimiter):
     headerIndex = 0
     for line in textArray:
         if len(line) > 0:
-            print(headerIndex)
+            # print(headerIndex)
             # finds the first line in the section and uses that as the heading
             firstNewlineIndex = line.find("\n")
             header = line[0:firstNewlineIndex]
-            print(header)
+            # print(header)
             # puts the remaining text into dataframe
             df2 = pd.DataFrame({'headerIndex':headerIndex, 'header': header, 'text':(line[firstNewlineIndex + 1:]).replace("\xa0", " ").split("\n")})
             # combines new dataframe with the return dataframe
@@ -38,10 +38,10 @@ def textToDataFrame(text, delimiter):
 
 
 
-with open("./Challenge2/data/CDCGuidelines.txt", encoding="utf8") as myFile:
-# filename = askopenfilename()
-# with open(filename, encoding="utf8") as myFile:
-    data = myFile.read()
+# with open("./Challenge2/data/CDCGuidelines.txt", encoding="utf8") as myFile:
+# # filename = askopenfilename()
+# # with open(filename, encoding="utf8") as myFile:
+#     data = myFile.read()
 
-    dfRes = textToDataFrame(data, "***")
-    print(dfRes.head(50))
+#     dfRes = textToDataFrame(data, "***")
+#     print(dfRes.head(50))
