@@ -34,6 +34,16 @@ GENERAL_RULES = ['Wear a mask',
     'Monitor your health daily',
     'Get vaccinated']
 
+rule_shortNames = ['wear_mask',
+    'social_distance',
+    'avoid_crowds',
+    'poor_ventilation',
+    'wash_hands',
+    'cover_coughs',
+    'disinfect_surfaces',
+    'monitor_health',
+    'vaccine']
+
 # chose to modify the situation keywords slightly to make them single words
 CATEGORIES = ['sick', 'older', 'asthma', 'newborns']
 
@@ -205,9 +215,10 @@ def startsWithVerb(s):
     # shortcut way to check for actionable instructions
     ret = False
     if len(s)>0:
+        s=s.lower()
         tag_pos_string = nltk.pos_tag(word_tokenize(s))
         firstWordPartOfSpeech = tag_pos_string[0][1]
-        ret = firstWordPartOfSpeech.startswith('VB')
+        ret = firstWordPartOfSpeech in ('VB', 'VBP')
     
     return ret
 
@@ -216,36 +227,46 @@ df['text_orig'] = df['text_orig'].str.replace('*', '')
 
 df['actionable'] = df['text_orig'].apply(startsWithVerb)
 
-
-
-
-
-
-
-
+#%%
+# limit to those that start with verb to give actionable instruction
+df = df[df['actionable']==True]
 
 #%%
+# this shows the number of instructions by category
+# note that we cannot have more than 20 instructions per category
+# TODO: we have too many instructions for each category right now...
+# this is probably because there are some duplicated instructions within each category
+# need to do a self-similarity comparison to remove dups
+print(df.groupby('category').count())
+
+#%%
+"""
+Next we want to compare the general rules against the rules that passed all 
+previous processing steps and find the union.  Using the LSI model to find phrase 
+similarity.  When a phrase is similar enough drop that general rule, 
+else add that general rule for that category.
+"""
+
+# this creates a dictionary and bag of words encoding based on all text
 headers = list(pd.Series(df['header'].unique()).str.split())
 texts = list(df['text'].str.split()) 
 allWords = texts + headers
 dictionary = corpora.Dictionary(allWords)
-
 corpus = [dictionary.doc2bow(text) for text in texts]
-# corpus_headers = [headerDictionary.doc2bow(text) for text in headers]
-
 lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2)
-# lsi_headers = models.LsiModel(corpus_headers, id2word=dictionary, num_topics=2)
-
+index = similarities.MatrixSimilarity(lsi[corpus])
 #%%
+
+"""
+Here's an example to show which phrases in the text are close to one of the general rules
+"""
 
 doc = "Clean and disinfect frequently touched surfaces daily"
 vec_bow = dictionary.doc2bow(doc.lower().split())
 vec_lsi = lsi[vec_bow] 
 print(vec_lsi)
 
-#%%
-index = similarities.MatrixSimilarity(lsi[corpus])
-#%%
+
 #perform a query
 sims = index[vec_lsi]
 # print(list(enumerate(sims)))
@@ -254,16 +275,27 @@ sims = sorted(enumerate(sims), key=lambda item: -item[1])
 orderedResults = []
 for doc_position, doc_score in sims:
     orderedResults.append((doc_score, df["text"].iloc[doc_position]))
-
-print(orderedResults[0:20])
-
-
+    
+for i, (sim, text) in enumerate(orderedResults):
+    if i > 20:
+        break
+    print(sim, text)
 
 #%%
 """
-steps:
-    1. make corpus from titles and find similar titles to categories
-    2. use pos to limit to sentences that start with verbs
-    3.  use lsi method to find union of general rules with specific rules
-    
+pre-process general rules
 """
+genRulesDf = pd.DataFrame(GENERAL_RULES, columns=['rule'])
+
+genRulesDf = nlpCleanup(genRulesDf, columnName='rule')
+
+print(genRulesDf.head())
+
+#%%
+
+for i, gen in enumerate(GENERAL_RULES):
+    vec_bow = dictionary.doc2bow(gen.lower().split())
+    vec_lsi = lsi[vec_bow]
+    sims = index[vec_lsi]
+    df[ rule_shortNames[i]] = sims
+    
