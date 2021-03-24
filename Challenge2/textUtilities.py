@@ -20,23 +20,28 @@ def splitText(text, delimiter):
 """
 def textToDataFrame(text, delimiter):
     textArray = text.split(delimiter)
-    df = pd.DataFrame(columns=["header", "text"])
+    df = pd.DataFrame(columns=["headerIndex","header", "text"])
+    headerIndex = 0
     for line in textArray:
-        # finds the first line in the section and uses that as the heading
-        firstNewlineIndex = line.find("\n")
-        header = line[0:firstNewlineIndex]
-        # puts the remaining text into dataframe
-        df2 = pd.DataFrame({'header': header, 'text':(line[firstNewlineIndex + 1:]).replace("\xa0", " ").split("\n")})
-        # combines new dataframe with the return dataframe
-        df = df.append(df2)
+        if len(line) > 0:
+            # print(headerIndex)
+            # finds the first line in the section and uses that as the heading
+            firstNewlineIndex = line.find("\n")
+            header = line[0:firstNewlineIndex]
+            # print(header)
+            # puts the remaining text into dataframe
+            df2 = pd.DataFrame({'headerIndex':headerIndex, 'header': header, 'text':(line[firstNewlineIndex + 1:]).replace("\xa0", " ").split("\n")})
+            # combines new dataframe with the return dataframe
+            df = df.append(df2, ignore_index=True)
+            headerIndex += 1
     return df
 
 
 
-with open("C:/Users/Timmy/Documents/work/hackathon/Not-The-Corona-Virus-team-repo/Challenge2/data/CDCGuidelines.txt", encoding="utf8") as myFile:
-# filename = askopenfilename()
-# with open(filename, encoding="utf8") as myFile:
-    data = myFile.read()
+# with open("./Challenge2/data/CDCGuidelines.txt", encoding="utf8") as myFile:
+# # filename = askopenfilename()
+# # with open(filename, encoding="utf8") as myFile:
+#     data = myFile.read()
 
-    dfRes = textToDataFrame(data, "***")
-    print(dfRes)
+#     dfRes = textToDataFrame(data, "***")
+#     print(dfRes.head(50))
