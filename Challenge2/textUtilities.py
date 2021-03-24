@@ -21,14 +21,16 @@ def splitText(text, delimiter):
 def textToDataFrame(text, delimiter):
     textArray = text.split(delimiter)
     df = pd.DataFrame(columns=["header", "text"])
+    headerIndex = 0
     for line in textArray:
         # finds the first line in the section and uses that as the heading
         firstNewlineIndex = line.find("\n")
         header = line[0:firstNewlineIndex]
         # puts the remaining text into dataframe
-        df2 = pd.DataFrame({'header': header, 'text':(line[firstNewlineIndex + 1:]).replace("\xa0", " ").split("\n")})
+        df2 = pd.DataFrame({'headerIndex':headerIndex, 'header': header, 'text':(line[firstNewlineIndex + 1:]).replace("\xa0", " ").split("\n")})
         # combines new dataframe with the return dataframe
         df = df.append(df2)
+        headerIndex += 1
     return df
 
 
