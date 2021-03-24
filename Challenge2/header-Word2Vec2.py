@@ -7,10 +7,13 @@ import numpy as np
 
 import gensim 
 import gensim.downloader
+import nltk
 from nltk.corpus import stopwords
+from nltk import word_tokenize, pos_tag
 from gensim import corpora
 from gensim import models
 from gensim import similarities
+
 
 from collections import defaultdict
 #%%
@@ -57,15 +60,20 @@ def splitText(text, delimiter):
 """
 def textToDataFrame(text, delimiter):
     textArray = text.split(delimiter)
-    df = pd.DataFrame(columns=["header", "text"])
+    df = pd.DataFrame(columns=["headerIndex","header", "text"])
+    headerIndex = 0
     for line in textArray:
-        # finds the first line in the section and uses that as the heading
-        firstNewlineIndex = line.find("\n")
-        header = line[0:firstNewlineIndex]
-        # puts the remaining text into dataframe
-        df2 = pd.DataFrame({'header': header, 'text':(line[firstNewlineIndex + 1:]).replace("\xa0", " ").split("\n")})
-        # combines new dataframe with the return dataframe
-        df = df.append(df2)
+        if len(line) > 0:
+            # print(headerIndex)
+            # finds the first line in the section and uses that as the heading
+            firstNewlineIndex = line.find("\n")
+            header = line[0:firstNewlineIndex]
+            # print(header)
+            # puts the remaining text into dataframe
+            df2 = pd.DataFrame({'headerIndex':headerIndex, 'header': header, 'text':(line[firstNewlineIndex + 1:]).replace("\xa0", " ").split("\n")})
+            # combines new dataframe with the return dataframe
+            df = df.append(df2, ignore_index=True)
+            headerIndex += 1
     return df
 
 filename = './data/CDCGuidelines.txt'
@@ -78,7 +86,6 @@ print(df.sample(10))
 
 headers = df['header'].unique()
 #%%
-
 """
 Next step is to see if we can automatically sort through all the titles 
 and find ones that are closely related to one of our categories
@@ -124,9 +131,98 @@ def nlpCleanup(df, columnName):
     df[columnName] = df[columnName].str.lower()
     return df
 
+# first make copy of unaltered text, this will be needed later
+df['header_orig'] = df['header']
+df['text_orig'] = df['text']
 
 df = nlpCleanup(df, columnName='header')
 df = nlpCleanup(df, columnName='text')
+
+#%%
+"""
+Next step is to vectorize the situation keywords (aka categories)
+I am using the glove vectors, which is a word2vec model trained on wikipedia
+"""
+cat_vects = []
+for c in CATEGORIES:
+    v = glove_vectors.word_vec(c)
+    cat_vects.append(v)
+    
+catDf = pd.DataFrame(data = cat_vects, index = CATEGORIES)
+
+#%%
+"""
+Next step is to compare each word in the title with each of our category vectors. 
+Return the minimum distance between all words in sentence with closest situation keyword
+If distance is less than 10, classify as applicable to that title
+"""
+
+def closestVect(text):
+    minDist = 10 #TODO - this is hardcoded for now... this might need to be tuned
+    closestKeyWord = None
+    
+    for w in text.split(" "):
+        try:
+            if len(w.strip())>0:
+                v = glove_vectors.word_vec(w)
+                # dist = glove_vectors.cosine_similarities(v, catDf.values)
+                # found that euclidean dist worked better than cosine similarity...
+                dist = np.sum(np.square(catDf - v), axis = 1)
+                idx = np.argmin(dist)
+                d = dist[idx]
+                kw = catDf.index[idx]
+                if d < minDist:
+                    closestKeyWord = kw
+                    minDist = d
+        except Exception as e:
+            # sometimes the words are not in glove_vectors, so just ignore those errors
+            # print(e)
+            pass
+    return closestKeyWord
+    
+
+df['category'] = df['header'].apply(closestVect)
+
+#%%
+"""
+Next step is to limit to rows that match one of the 4 categories
+"""
+df = df[np.logical_not(df['category'].isnull())]
+
+headerDf = df[['headerIndex', 'header', 'category']]
+headerDf = headerDf.drop_duplicates()
+
+# print out those rows
+print(headerDf)
+
+#%%
+"""
+Next we want to limit these texts to just ones that start with a verb
+"""
+
+def startsWithVerb(s):
+    # returns if the first word in the sentence is a verb = this is a 
+    # shortcut way to check for actionable instructions
+    ret = False
+    if len(s)>0:
+        tag_pos_string = nltk.pos_tag(word_tokenize(s))
+        firstWordPartOfSpeech = tag_pos_string[0][1]
+        ret = firstWordPartOfSpeech.startswith('VB')
+    
+    return ret
+
+df['text_orig'] = df['text_orig'].str.replace('@', '')
+df['text_orig'] = df['text_orig'].str.replace('*', '')
+
+df['actionable'] = df['text_orig'].apply(startsWithVerb)
+
+
+
+
+
+
+
+
 
 #%%
 headers = list(pd.Series(df['header'].unique()).str.split())
@@ -142,7 +238,7 @@ lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2)
 
 #%%
 
-doc = "Avoid crowds"
+doc = "Clean and disinfect frequently touched surfaces daily"
 vec_bow = dictionary.doc2bow(doc.lower().split())
 vec_lsi = lsi[vec_bow] 
 print(vec_lsi)
@@ -152,7 +248,7 @@ index = similarities.MatrixSimilarity(lsi[corpus])
 #%%
 #perform a query
 sims = index[vec_lsi]
-print(list(enumerate(sims)))
+# print(list(enumerate(sims)))
 
 sims = sorted(enumerate(sims), key=lambda item: -item[1])
 orderedResults = []
