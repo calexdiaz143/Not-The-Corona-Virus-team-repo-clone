@@ -8,6 +8,11 @@ import numpy as np
 import gensim 
 import gensim.downloader
 from nltk.corpus import stopwords
+from gensim import corpora
+from gensim import models
+from gensim import similarities
+
+from collections import defaultdict
 #%%
 glove_vectors = gensim.downloader.load('glove-wiki-gigaword-50')
 
@@ -69,7 +74,7 @@ with open(filename, encoding="utf8") as myFile:
     data = myFile.read()
 
 df = textToDataFrame(data, "***")
-print(df.sample())
+print(df.sample(10))
 
 headers = df['header'].unique()
 #%%
@@ -91,6 +96,23 @@ def removeStopWords(text):
     returnText = returnText.strip()
     # print(returnText)
     return returnText
+
+# remove words that appear only once
+frequency = defaultdict(int)
+combined = list(df['text']) + list(df['header'])
+
+for text in combined:
+    for token in text.split():
+        frequency[token] += 1
+        
+def removeSingleOccurances(text):
+    returnText = ''
+    for w in text.split(' '):
+        if frequency[token] > 1:
+            returnText += ' ' + w
+    returnText = returnText.strip()
+    # print(returnText)
+    return returnText
     
 
 def nlpCleanup(df, columnName):
@@ -98,12 +120,54 @@ def nlpCleanup(df, columnName):
     df[columnName] = df[columnName].str.replace(r'(\b\w{1,2}\b)', '',regex=True) # for word length lt 2
     df[columnName] = df[columnName].str.replace('[^\w\s]', '',regex=True) # for punctuation 
     df[columnName] = df[columnName].apply(removeStopWords)
+    df[columnName] = df[columnName].apply(removeSingleOccurances)
     df[columnName] = df[columnName].str.lower()
     return df
 
 
 df = nlpCleanup(df, columnName='header')
 df = nlpCleanup(df, columnName='text')
+
+#%%
+dictionary = corpora.Dictionary(df['text'].str.split())
+
+corpus = [dictionary.doc2bow(text) for text in df['text'].str.split()]
+
+lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2)
+
+#%%
+
+doc = "wear mask"
+
+vec_bow = dictionary.doc2bow(doc.lower().split())
+
+vec_lsi = lsi[vec_bow] 
+
+print(vec_lsi)
+
+#%%
+index = similarities.MatrixSimilarity(lsi[corpus])
+#%%
+#perform a query
+sims = index[vec_lsi]
+print(list(enumerate(sims)))
+
+sims = sorted(enumerate(sims), key=lambda item: -item[1])
+orderedResults = []
+for doc_position, doc_score in sims:
+    orderedResults.append((doc_score, df["text"].iloc[doc_position]))
+
+
+
+
+
+
+
+
+
+
+
+
 
 #%%
 """
