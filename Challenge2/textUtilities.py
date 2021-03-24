@@ -37,6 +37,24 @@ def textToDataFrame(text, delimiter):
     return df
 
 
+""" Comparison function need to fill in """
+def matchSimilar(item, selection):
+    if item in selection:
+        # return item in selection if similar found
+        return item
+    else:
+        return item 
+
+""" Compares both sets, returns the union """
+def union(set1, set2):
+    returnSet = []
+    for item in set1:
+        returnSet.append(matchSimilar(item, set2))
+    for item in set2:
+        if item not in returnSet:
+            returnSet.append(item)
+
+
 
 # with open("./Challenge2/data/CDCGuidelines.txt", encoding="utf8") as myFile:
 # # filename = askopenfilename()
