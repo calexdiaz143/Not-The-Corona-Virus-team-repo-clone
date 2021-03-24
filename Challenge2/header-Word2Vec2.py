@@ -129,20 +129,22 @@ df = nlpCleanup(df, columnName='header')
 df = nlpCleanup(df, columnName='text')
 
 #%%
-dictionary = corpora.Dictionary(df['text'].str.split())
+headers = list(pd.Series(df['header'].unique()).str.split())
+texts = list(df['text'].str.split()) 
+allWords = texts + headers
+dictionary = corpora.Dictionary(allWords)
 
-corpus = [dictionary.doc2bow(text) for text in df['text'].str.split()]
+corpus = [dictionary.doc2bow(text) for text in texts]
+# corpus_headers = [headerDictionary.doc2bow(text) for text in headers]
 
 lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2)
+# lsi_headers = models.LsiModel(corpus_headers, id2word=dictionary, num_topics=2)
 
 #%%
 
-doc = "wear mask"
-
+doc = "Avoid crowds"
 vec_bow = dictionary.doc2bow(doc.lower().split())
-
 vec_lsi = lsi[vec_bow] 
-
 print(vec_lsi)
 
 #%%
@@ -157,64 +159,15 @@ orderedResults = []
 for doc_position, doc_score in sims:
     orderedResults.append((doc_score, df["text"].iloc[doc_position]))
 
-
-
-
-
-
-
-
-
-
+print(orderedResults[0:20])
 
 
 
 #%%
 """
-Next step is to vectorize the situation keywords (aka categories)
-I am using the glove vectors, which is a word2vec model trained on wikipedia
-"""
-cat_vects = []
-for c in CATEGORIES:
-    v = glove_vectors.word_vec[c]
-    cat_vects.append(v)
+steps:
+    1. make corpus from titles and find similar titles to categories
+    2. use pos to limit to sentences that start with verbs
+    3.  use lsi method to find union of general rules with specific rules
     
-catDf = pd.DataFrame(data = cat_vects, index = CATEGORIES)
-
-#%%
 """
-Next step is to compare each word in the title with each of our category vectors. 
-Return the minimum distance between all words in sentence with closest situation keyword
-If distance is less than 10, classify as applicable to that title
-"""
-
-def closestVect(text):
-    minDist = 10 #TODO - this is hardcoded for now... this might need to be tuned
-    closestKeyWord = None
-    
-    for w in text.split(" "):
-        try:
-            if len(w.strip())>0:
-                v = glove_vectors.word_vec(w)
-                # dist = glove_vectors.cosine_similarities(v, catDf.values)
-                # found that euclidean dist worked better than cosine similarity...
-                dist = np.sum(np.square(catDf - v), axis = 1)
-                idx = np.argmin(dist)
-                d = dist[idx]
-                kw = catDf.index[idx]
-                if d < minDist:
-                    closestKeyWord = kw
-                    minDist = d
-        except Exception as e:
-            # print(e)
-            pass
-    return closestKeyWord
-    
-
-
-df['category'] = df['header'].apply(closestVect)
-
-#%%
-df = df[np.logical_not(df['category'].isnull())]
-
-
