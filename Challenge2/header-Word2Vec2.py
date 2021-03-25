@@ -116,10 +116,10 @@ def removeStopWords(text):
 
 # remove words that appear only once
 frequency = defaultdict(int)
-combined = list(df['text']) + list(df['header'])
+combined = list(df['text']) + list(df['header']) + GENERAL_RULES
 
 for text in combined:
-    for token in text.split():
+    for token in text.split(' '):
         frequency[token] += 1
         
 def removeSingleOccurances(text):
@@ -147,6 +147,16 @@ df['text_orig'] = df['text']
 
 df = nlpCleanup(df, columnName='header')
 df = nlpCleanup(df, columnName='text')
+
+#%%
+"""
+pre-process general rules
+"""
+genRulesDf = pd.DataFrame(GENERAL_RULES, columns=['rule'])
+
+genRulesDf = nlpCleanup(genRulesDf, columnName='rule')
+
+print(genRulesDf.head())
 
 #%%
 """
@@ -222,8 +232,8 @@ def startsWithVerb(s):
     
     return ret
 
-df['text_orig'] = df['text_orig'].str.replace('@', '')
-df['text_orig'] = df['text_orig'].str.replace('*', '')
+df['text_orig'] = df['text_orig'].str.replace('@', '', regex=False)
+df['text_orig'] = df['text_orig'].str.replace('*', '', regex=False)
 
 df['actionable'] = df['text_orig'].apply(startsWithVerb)
 
@@ -233,11 +243,14 @@ df = df[df['actionable']==True]
 
 #%%
 # this shows the number of instructions by category
-# note that we cannot have more than 20 instructions per category
+# note that we cannot have more than 18 instructions per category
 # TODO: we have too many instructions for each category right now...
 # this is probably because there are some duplicated instructions within each category
 # need to do a self-similarity comparison to remove dups
 print(df.groupby('category').count())
+
+print(df)
+
 
 #%%
 """
@@ -245,23 +258,42 @@ Next we want to compare the general rules against the rules that passed all
 previous processing steps and find the union.  Using the LSI model to find phrase 
 similarity.  When a phrase is similar enough drop that general rule, 
 else add that general rule for that category.
+We'll also use phrase similarity to remove duplicate instructions within each category
 """
 
 # this creates a dictionary and bag of words encoding based on all text
 headers = list(pd.Series(df['header'].unique()).str.split())
 texts = list(df['text'].str.split()) 
-allWords = texts + headers
+generalRules = list(genRulesDf['rule'].str.split())
+allWords = texts + headers + generalRules
 dictionary = corpora.Dictionary(allWords)
 corpus = [dictionary.doc2bow(text) for text in texts]
 lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2)
 index = similarities.MatrixSimilarity(lsi[corpus])
+
+#%%
+# TODO
+"""
+Next we need to remove duplicate/highly overlapping instructions within this list
+For example, "Keep track of your symptoms." and "Monitor your symptoms." are 
+very similar instructions given for sick people.  
+We need to remove the dups within each category.
+"""
+# for cat in CATEGORIES:
+#     df_temp = df[df['category'] == cat]
+#     txts = df_temp['text']
+#     for i, text in txts:
+#         vec_bow = dictionary.doc2bow(doc.lower().split())
+#         vec_lsi = lsi[vec_bow]
+        
+
 #%%
 
 """
 Here's an example to show which phrases in the text are close to one of the general rules
 """
 
-doc = "Clean and disinfect frequently touched surfaces daily"
+doc = "Avoid crowds"
 vec_bow = dictionary.doc2bow(doc.lower().split())
 vec_lsi = lsi[vec_bow] 
 print(vec_lsi)
@@ -281,21 +313,60 @@ for i, (sim, text) in enumerate(orderedResults):
         break
     print(sim, text)
 
-#%%
-"""
-pre-process general rules
-"""
-genRulesDf = pd.DataFrame(GENERAL_RULES, columns=['rule'])
 
-genRulesDf = nlpCleanup(genRulesDf, columnName='rule')
-
-print(genRulesDf.head())
 
 #%%
-
+"""
+add a column to show similarity of each row to the general rules
+"""
 for i, gen in enumerate(GENERAL_RULES):
     vec_bow = dictionary.doc2bow(gen.lower().split())
     vec_lsi = lsi[vec_bow]
     sims = index[vec_lsi]
-    df[ rule_shortNames[i]] = sims
+    df[rule_shortNames[i]] = sims
+
+#%%
+# a threshold to id very similar phrases
+THRESHOLD = 0.999  # TODO: this probably should be tuned 
+
+dfs = []
+
+for cat in CATEGORIES:
+    print('--------')
+    print(cat)
+    tempDf = df[df['category'] == cat]
+    text = tempDf['text']
     
+    for i, rule in enumerate(rule_shortNames):
+        dupRule = np.any(tempDf[rule] > THRESHOLD)
+
+        if not dupRule:
+            newRule = pd.DataFrame([[cat, GENERAL_RULES[i]]], columns=['category', 'text_orig'])
+            tempDf = pd.concat([tempDf,newRule])
+        else:
+            print('found dup:', rule)
+            
+    dfs.append(tempDf[['category','text_orig']])
+
+finalDf = pd.concat(dfs)
+
+#%%
+"""
+format final output per HTM spec and save to csv
+"""
+
+finalDf['category'] = finalDf['category'].str.replace('older', 'older_adult', regex=False)
+finalDf['category'] = finalDf['category'].str.replace('newborns', 'covid_with_newborn', regex=False)
+
+finalDf.columns = ['situation', 'rules']
+
+print(finalDf)
+
+fileName = './submission/Challenge2_submission.csv'
+
+finalDf.to_csv(fileName, index=False)
+
+
+
+
+
