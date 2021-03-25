@@ -5,19 +5,14 @@
 import pandas as pd
 import numpy as np
 import math
+from collections import defaultdict
 
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-import gensim 
-import gensim.downloader
-import nltk
+from sklearn.feature_extraction.text import  TfidfVectorizer
 from nltk.corpus import stopwords
 from nltk import word_tokenize, pos_tag
 from gensim import corpora
 from gensim import models
 from gensim import similarities
-
-
-from collections import defaultdict
 
 #%%
 en_stops = set(stopwords.words('english'))
@@ -57,10 +52,11 @@ PROMPT_KEYS = ['sick', 'older_adult', 'asthma', 'covid_with_newborn']
 # Parse the CDC guidelines text file into a python dictionary, where the keys are the title 
 # headers and the values are a list of sentences that fall under that header
 
-""" Takes in input text, splits by delimiter, returns as dictionary with headings as keys 
-    output example: {'Things to know about the COVID-19 Pandemic':'Three Important Ways to Slow the Spread', 'Wear a mask to protect yourself and others and stop the spread of COVID-19.', ''}
-"""
+
 def splitText(text, delimiter):
+    """ Takes in input text, splits by delimiter, returns as dictionary with headings as keys 
+    output example: {'Things to know about the COVID-19 Pandemic':'Three Important Ways to Slow the Spread', 'Wear a mask to protect yourself and others and stop the spread of COVID-19.', ''}
+    """
     textArray = text.split(delimiter)
     textDictionary = {}
     for line in textArray:
@@ -72,9 +68,11 @@ def splitText(text, delimiter):
         
     return textDictionary
 
-""" Takes in input text, splits by delimiter, returns as pandas dataframe with headings as keys e.g. [index, heade, text]
-"""
+
 def textToDataFrame(text, delimiter):
+    """ 
+    Takes in input text, splits by delimiter, returns as pandas dataframe with headings as keys e.g. [index, heade, text]
+    """
     textArray = text.split(delimiter)
     df = pd.DataFrame(columns=["headerIndex","header", "text"])
     headerIndex = 0
@@ -178,7 +176,7 @@ print(genRulesDf.head())
 promptDf = pd.DataFrame(PROMPTS, columns=['prompt'])
 promptDf = nlpCleanup(promptDf, columnName='prompt')
 
-print(genRulesDf.head())
+print(promptDf.head())
 
 #%%
 
@@ -272,7 +270,7 @@ def startsWithVerb(s):
     ret = False
     if len(s)>0:
         s=s.lower()
-        tag_pos_string = nltk.pos_tag(word_tokenize(s))
+        tag_pos_string = pos_tag(word_tokenize(s))
         firstWordPartOfSpeech = tag_pos_string[0][1]
         ret = firstWordPartOfSpeech in ('VB', 'VBP')
     
@@ -288,14 +286,15 @@ df['actionable'] = df['text_orig'].apply(startsWithVerb)
 df = df[df['actionable']==True]
 
 #%%
+
 # this shows the number of instructions by category
-# note that we cannot have more than 18 instructions per category
+# note that we cannot have more than 20 instructions per category
 # TODO: we have too many instructions for each category right now...
 # this is probably because there are some duplicated instructions within each category
 # need to do a self-similarity comparison to remove dups
 print(df.groupby('category').count())
 
-print(df)
+
 
 
 #%%
@@ -313,7 +312,9 @@ texts = list(df['text'].str.split())
 generalRules = list(genRulesDf['rule'].str.split())
 allWords = texts + headers + generalRules
 dictionary = corpora.Dictionary(allWords)
+# create corpus based on text (not headers)
 corpus = [dictionary.doc2bow(text) for text in texts]
+# create 2-d lsi model using gensim
 lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2)
 index = similarities.MatrixSimilarity(lsi[corpus])
 
