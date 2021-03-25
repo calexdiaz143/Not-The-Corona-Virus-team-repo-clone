@@ -399,6 +399,87 @@ for cat in PROMPT_KEYS:
 finalDf = pd.concat(dfs)
 
 #%%
+def pruneFinal(finalDf, stoplist, threshold):
+    returnDf = pd.DataFrame()
+    # returnDf = returnDf.append(finalDf)
+    
+    markedRules = []
+    uniqueCategories = finalDf.category.unique()
+    finalDfIndex = 0
+    docStart = 0
+    for category in uniqueCategories:
+       
+        selection = finalDf.loc[finalDf['category'] == category]
+        
+        documents = selection['text_orig'].values.tolist()
+
+        texts = [
+            [word for word in document.lower().split() if word not in stoplist]
+            for document in documents
+        ]
+   
+        frequency = defaultdict(int)
+        for text in texts:
+            for token in text:
+                frequency[token] += 1
+        
+        texts = [
+            [token for token in text if frequency[token] > 1]
+            for text in texts
+        ]
+        
+        dictionary = corpora.Dictionary(texts)
+        corpus = [dictionary.doc2bow(text) for text in texts]
+        
+        lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2)
+        
+        # for i, gen in enumerate(genRulesDf.values):
+        # gen = gen[0].split()
+        # vec_bow = dictionary.doc2bow(gen)
+        # vec_lsi = lsi[vec_bow]
+        # sims = index[vec_lsi]
+        # df[rule_shortNames[i]] = sims
+        docIndex = 0
+        for i, gen in enumerate(documents):
+            
+            # doc = documents[i]
+            # vec_bow = dictionary.doc2bow(doc.lower().split())
+            # vec_lsi = lsi[vec_bow]  # convert the query to LSI space
+            # #print(vec_lsi)
+            # index = similarities.MatrixSimilarity(lsi[corpus])
+            # sims = index[vec_lsi]
+            # #print(list(enumerate(sims)))
+            # sims = sorted(enumerate(sims), key=lambda item: -item[1])
+            # for doc_position, doc_score in sims:
+            vec_bow = dictionary.doc2bow(gen.lower().split())
+            vec_lsi = lsi[vec_bow]  # convert the query to LSI space
+            #print("Category: " + category + " rule index: " + str(docIndex) + " rule " + gen + " amount of values to check against :" + str(len(documents)))
+            #print(vec_lsi)
+            index = similarities.MatrixSimilarity(lsi[corpus])
+            sims = index[vec_lsi]  
+            #overThreshold = [tupleVal for tupleVal in sims if tupleVal[:]> threshold]
+            overThreshold = [simVal for simVal in list(enumerate(sims)) if simVal[1] > threshold and (simVal[0] + docStart) not in markedRules]
+            #print(overThreshold)
+            #print(list(enumerate(sims)))  
+            if len(overThreshold) > 1:
+                #print("index to remove: " + str(finalDfIndex))
+                markedRules.append(finalDfIndex)
+            docIndex += 1
+            finalDfIndex += 1
+        docStart += docIndex
+        #print(returnDf)
+        #print(markedRules)
+        
+
+        finalDf = finalDf.reset_index(drop=True)
+        removeDf = finalDf.index.isin(markedRules)
+        print(finalDf.index)
+    return finalDf[~removeDf]
+
+finalDf = pruneFinal(finalDf, en_stops, 0.999)
+
+
+#%%
 """
 format final output per HTM spec and save to csv
 """
