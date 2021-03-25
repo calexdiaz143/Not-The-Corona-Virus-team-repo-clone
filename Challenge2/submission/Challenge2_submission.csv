@@ -1,0 +1,116 @@
+situation,rules
+sick,Keep track of your symptoms.
+sick,Take care of yourself. 
+sick,"Get rest and stay hydrated. Take over-the-counter medicines, such as acetaminophen, to help you feel better."
+sick,"Tell your close contacts that they may have been exposed to COVID-19. An infected person can spread COVID-19 starting 48 hours (or 2 days) before the person has any symptoms or tests positive. By letting your close contacts know they may have been exposed to COVID-19, you are helping to protect everyone."
+sick,See COVID-19 and Animals if you have questions about pets.
+sick,Monitor your symptoms.
+sick,Follow care instructions from your healthcare provider and local health department. Your local health authorities may give instructions on checking your symptoms and reporting information.
+sick,Call 911 or call ahead to your local emergency facility: Notify the operator that you are seeking care for someone who has or may have COVID-19.
+sick,Cover your coughs and sneezes.
+sick,Cover your mouth and nose with a tissue when you cough or sneeze.
+sick,Throw away used tissues in a lined trash can.
+sick,Clean your hands often
+sick,Wash your hands.
+sick,"Do not share dishes, drinking glasses, cups, eating utensils, towels, or bedding with other people in your home."
+sick,"Clean the area or item with soap and water or another detergent if it is dirty. Then, use a household disinfectant."
+sick,Be sure to follow the instructions on the label to ensure safe and effective use of the product.
+sick,"Monitor your symptoms. If you have an emergency warning sign (including trouble breathing), seek emergency medical care immediately"
+sick,"Use a separate bathroom, if possible"
+sick,Find CDC’s recommendations for your situation below.
+sick,Provide support
+sick,Help the person who is sick follow their doctor’s instructions for care and medicine.
+sick,See if over-the-counter medicines for fever help the person feel better.
+sick,Make sure the person who is sick drinks a lot of fluids and rests.
+sick,"Help them with grocery shopping, filling prescriptions, and getting other items they may need. Consider having the items delivered through a delivery service, if possible."
+sick,"Take care of their pet(s), and limit contact between the person who is sick and their pet(s) when possible."
+sick,Have their doctor’s phone number on hand.
+sick,"Call their doctor if the person keeps getting sicker. For medical emergencies, call 911 and tell the dispatcher that the person has or might have COVID-19."
+sick,Call 911 or call ahead to your local emergency facility: Notify the operator that you are seeking care for someone who has or may have COVID-19.
+sick,"Wash your hands frequently with soap and water for at least 20 seconds. If soap and water are not available, use hand sanitizer containing at least 60% alcohol and rub your hands together until they are dry."
+sick,Disinfect any items that you need to bring to the child.
+sick,Do not disinfect food that you bring to the child.
+sick,"Check the child’s temperature twice a day and watch for symptoms of COVID-19, such as fever, cough or shortness of breath, or symptoms specific to children."
+sick,"Check the child’s temperature twice a day and watch for symptoms of COVID-19, such as fever, cough or shortness of breath, or symptoms specific to children."
+sick,Wear a mask
+sick,Stay 6 feet from others
+sick,Avoid crowds
+sick,Avoid poorly ventilated spaces
+older_adult,Do not change your treatment plan without talking to your healthcare provider.
+older_adult,Have at least a 30-day supply of medicine.
+older_adult,Do not delay getting emergency care.
+older_adult,Call your healthcare provider about underlying medical conditions
+older_adult,Reduce Your Risk of Getting Sick
+older_adult,Keep 6 feet of distance.
+older_adult,Don't touch your face
+older_adult,"Consider the level of risk before deciding to go out and ensure that people at increased risk of severe illness from COVID-19 and those who live with them, are taking steps to protect themselves."
+older_adult,Consider the Level of Risk
+older_adult,"Consider avoiding activities where taking protective measures may be difficult, such as activities where social distancing can’t be maintained."
+older_adult,Take Steps to Protect Yourself
+older_adult,"Keep these items on hand and use them when venturing out: a mask, tissues, and a hand sanitizer with at least 60% alcohol."
+older_adult,Encourage social distancing during your visit
+older_adult,Consider keeping a list of people you visited or who visited you and when the visit occurred. This will help with contact tracing if someone becomes sick.
+older_adult,"Consider current levels of COVID-19 infection in your specific community. If infection is widespread, consider delaying or cancelling a visit."
+older_adult,Contact Your Healthcare Provider & Seek Care
+older_adult,Check Your Symptoms
+older_adult," be aware that a single reading higher than 100°F (37.8°C), multiple readings above 99°F (37.2°C), or a rise in temperature greater than 2°F (1.1°C) above the patient’s normal (baseline) temperature may be a sign of infection"
+older_adult,Develop a Care Plan
+older_adult,"Complete your care plan in consultation with your doctor, and if needed, with help from a family member, caregiver or home health aide."
+older_adult,Remember the importance of staying physically active and practicing healthy habits to cope with stress.
+older_adult,"Get tips on staying connected while at home in English and Spanish icon There are community agencies who may be able to help, and call lines that provide a friendly voice and emotional support to older adults."
+older_adult,Wear a mask
+older_adult,Avoid crowds
+older_adult,Avoid poorly ventilated spaces
+asthma,Make sure that you have at least a 30-day supply of your medicines.
+asthma,"Take everyday precautions like washing your hands, avoiding close contact, and staying at least 6 feet (about 2 arm lengths) from other people."
+asthma,Wash your hands often with soap and water for at least 20 seconds or use hand sanitizer that contains at least 60% alcohol.
+asthma,Wear a mask
+asthma,Stay 6 feet from others
+asthma,Avoid crowds
+asthma,Avoid poorly ventilated spaces
+asthma,Wash your hands often
+asthma,Cover coughs and sneezes
+asthma,Monitor your health daily
+asthma,Get vaccinated
+covid_with_newborn,Take steps to prevent getting COVID-19 when you do interact with others.
+covid_with_newborn,"Wash your hands with soap and water for at least 20 seconds. If soap and water are not available, use a hand sanitizer with at least 60% alcohol."
+covid_with_newborn,"Keep all of your healthcare appointments during and after pregnancy. Visit your healthcare provider for all recommended appointments. If you’re concerned about going to your appointments because of COVID-19, ask your healthcare provider what steps they are taking to separate healthy patients from those who might be sick. If you need help finding a healthcare provider, contact your nearest hospital clinic, community health center  or health department."
+covid_with_newborn,Get recommended vaccines. Getting the recommended vaccines during pregnancy can help protect you and your baby.
+covid_with_newborn,Get vaccinated against influenza (flu). Others living in your household should also get vaccinated to protect themselves and you.
+covid_with_newborn,"Get the whooping cough (Tdap) vaccine during pregnancy to protect your baby against whooping cough, which can have similar symptoms to COVID-19."
+covid_with_newborn,"Keep at least a 30-day supply of prescription and non-prescription medicines. Talk to a healthcare provider, insurer, or pharmacist about getting an extra supply (for example, more than 30 days) of prescription medicines, if possible, to reduce your trips to the pharmacy."
+covid_with_newborn,Call your healthcare provider if you have any concerns about your pregnancy or if you get sick and think that you may have COVID-19.
+covid_with_newborn,"Do not delay getting emergency care because of COVID-19. Emergency departments have steps in place to protect you from getting COVID-19 if you need care. If you need emergency help, call 911 right away. Tell them that you are pregnant and are having an emergency. If someone else is driving to the emergency department, call while you are on the way. If you need to drive yourself call before you start driving.​"
+covid_with_newborn,Decide if your newborn is rooming-in with you in the hospital.
+covid_with_newborn,Take precautions if your newborn is rooming-in with you in the hospital.
+covid_with_newborn,"Wash your hands with soap and water for at least 20 seconds before holding or caring for your newborn. If soap and water are not available, use a hand sanitizer with at least 60% alcohol."
+covid_with_newborn,Keep your newborn more than 6 feet away from you as much as possible.
+covid_with_newborn,Have a healthy caregiver who is not at increased risk for severe illness provide care for your newborn.
+covid_with_newborn,"Wash your hands with soap and water for at least 20 seconds before touching for your newborn. If soap and water are not available, use a hand sanitizer with at least 60% alcohol."
+covid_with_newborn,Wash your hands before breastfeeding
+covid_with_newborn,"Use your own breast pump (one not shared with anyone else), if possible."
+covid_with_newborn,"Wash your hands with soap and water for at least 20 seconds before touching any pump or bottle parts, and before expressing breast milk."
+covid_with_newborn,"Consider having a healthy caregiver who does not have COVID-19, is not at increased risk for severe illness from COVID-19, and is living in the same home feed the expressed breast milk to the baby. If the caregiver is living in the same home or has been in close contact with you, they might have been exposed. Any caregiver feeding the baby should wear a mask when caring for the baby for the entire time you are in isolation and during their own quarantine period after you complete isolation."
+covid_with_newborn,Do not put a face shield or mask on your baby
+covid_with_newborn,Keep distance between your baby and people who do not live in your household or who are sick
+covid_with_newborn,Consider the risks of spreading COVID-19 to you and your baby before you decide whether to go out for activities other than healthcare visits or child care.
+covid_with_newborn,Keep 6 feet of distance between your baby and people who do not live in your household.
+covid_with_newborn,"Ask your child care program about the plans they have in place to protect your baby, family, and their staff from COVID-19."
+covid_with_newborn,Know possible signs and symptoms of COVID-19 infection among babies
+covid_with_newborn,Bring your baby for newborn visits
+covid_with_newborn,Check how you and your baby are doing overall.
+covid_with_newborn,Check your baby’s growth and feeding.
+covid_with_newborn,Check your baby for jaundice (yellow color in the skin or eyes).
+covid_with_newborn,"Make sure your baby’s newborn screening tests were done (including a bloodspot, hearing test, and a test for critical congenital heart defects) and do any repeat or follow-up testing, if necessary."
+covid_with_newborn,Ensure safe sleep for your baby
+covid_with_newborn,"Take steps to reduce the risk of sudden infant death syndrome (SIDS) and other sleep-related deaths, by doing the following:"
+covid_with_newborn,Place your baby on his or her back for all sleep times – naps and at night.
+covid_with_newborn,"Use a firm, flat sleep surface, such as a mattress in a crib covered by a fitted sheet."
+covid_with_newborn,"Have the baby share your room but not your bed. Your baby shouldn’t sleep on an adult bed, cot, air mattress, couch, or chair, whether he or she is sleeping alone, with you, or with anyone else."
+covid_with_newborn,"Keep soft bedding, such as blankets, pillows, bumper pads, and soft toys, out of your baby’s sleep area."
+covid_with_newborn,Do not cover your baby’s head or allow your baby to get too hot. Signs your baby may be getting too hot include sweating or his or her chest feeling hot.
+covid_with_newborn,Do not smoke or allow anyone to smoke around your baby.
+covid_with_newborn,Wear a mask
+covid_with_newborn,Stay 6 feet from others
+covid_with_newborn,Avoid crowds
+covid_with_newborn,Avoid poorly ventilated spaces
