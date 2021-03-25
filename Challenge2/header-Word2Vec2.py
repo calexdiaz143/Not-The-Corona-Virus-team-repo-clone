@@ -18,7 +18,7 @@ from gensim import similarities
 from collections import defaultdict
 #%%
 glove_vectors = gensim.downloader.load('glove-wiki-gigaword-50')
-
+#nltk.download('averaged_perceptron_tagger')
 en_stops = set(stopwords.words('english'))
 
 #%%
@@ -216,7 +216,7 @@ def startsWithVerb(s):
     ret = False
     if len(s)>0:
         s=s.lower()
-        tag_pos_string = nltk.pos_tag(word_tokenize(s))
+        tag_pos_string = pos_tag(word_tokenize(s))
         firstWordPartOfSpeech = tag_pos_string[0][1]
         ret = firstWordPartOfSpeech in ('VB', 'VBP')
     
@@ -299,3 +299,28 @@ for i, gen in enumerate(GENERAL_RULES):
     sims = index[vec_lsi]
     df[ rule_shortNames[i]] = sims
     
+""" Comparison function need to fill in """
+def matchRules(genRule, ruleShort, category, df, threshold):
+    returnDf = df.loc[(df['category'] == category) & (df[ruleShort] > threshold)]
+    # rules = returnDf.
+    #
+    #return returnDf['text_orig'].values.tolist()
+    return returnDf
+
+""" Compares both sets, returns the union """
+def union(genRules, rulesShort, category, df, threshold):
+    returnSet = pd.DataFrame()
+    for index in range(0, len(genRules)):
+        
+        match = matchRules(genRules[index], rulesShort[index], category, df, threshold)
+        #if len(match) == 0:
+        #    match = pd.DataFrame(genRules[index])
+        returnSet = returnSet.append(match)
+    
+    return returnSet.drop_duplicates(subset=['text_orig'])
+    
+    # return list(dict.fromkeys(returnSet))
+    #return matchRules(genRules[0], rulesShort[0], category, df, threshold)
+
+print("testing Union")
+returnSick = union(GENERAL_RULES, rule_shortNames, CATEGORIES[0], df, 0.99)
