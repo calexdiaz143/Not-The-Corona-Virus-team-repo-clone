@@ -4,7 +4,9 @@
 ## Import python packages
 import pandas as pd
 import numpy as np
+import math
 
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 import gensim 
 import gensim.downloader
 import nltk
@@ -16,9 +18,8 @@ from gensim import similarities
 
 
 from collections import defaultdict
-#%%
-glove_vectors = gensim.downloader.load('glove-wiki-gigaword-50')
 
+#%%
 en_stops = set(stopwords.words('english'))
 
 #%%
@@ -49,9 +50,8 @@ PROMPTS = ["If you are sick with COVID-19",
            "If you have asthma",
            "If you are at home caring for a newborn and are diagnosed with or test positive for COVID-19"]
 
+PROMPT_KEYS = ['sick', 'older_adult', 'asthma', 'covid_with_newborn']
 
-# chose to modify the situation keywords slightly to make them single words
-CATEGORIES = ['sick', 'older', 'asthma', 'newborns']
 
 #%%
 # Parse the CDC guidelines text file into a python dictionary, where the keys are the title 
@@ -136,14 +136,23 @@ def removeSingleOccurances(text):
     returnText = returnText.strip()
     # print(returnText)
     return returnText
-    
 
+def removePlurals(text):
+    returnText = ''
+    for w in text.split(' '):
+        if w.endswith('s'):
+            w = w[:-1]
+        returnText += ' ' + w
+    returnText = returnText.strip()
+    return returnText
+    
 def nlpCleanup(df, columnName):
     df[columnName] = df[columnName].str.replace('\d+', '',regex=True) # for digits
     df[columnName] = df[columnName].str.replace(r'(\b\w{1,2}\b)', '',regex=True) # for word length lt 2
     df[columnName] = df[columnName].str.replace('[^\w\s]', '',regex=True) # for punctuation 
     df[columnName] = df[columnName].apply(removeStopWords)
     df[columnName] = df[columnName].apply(removeSingleOccurances)
+    df[columnName] = df[columnName].apply(removePlurals)
     df[columnName] = df[columnName].str.lower()
     return df
 
@@ -153,6 +162,8 @@ df['text_orig'] = df['text']
 
 df = nlpCleanup(df, columnName='header')
 df = nlpCleanup(df, columnName='text')
+
+print(df.sample(10))
 
 #%%
 """
@@ -170,55 +181,79 @@ promptDf = nlpCleanup(promptDf, columnName='prompt')
 print(genRulesDf.head())
 
 #%%
-"""
-Next step is to vectorize the situation keywords (aka categories)
-I am using the glove vectors, which is a word2vec model trained on wikipedia
-"""
-cat_vects = []
-for c in CATEGORIES:
-    v = glove_vectors.word_vec(c)
-    cat_vects.append(v)
-    
-catDf = pd.DataFrame(data = cat_vects, index = CATEGORIES)
+
+headers = list(pd.Series(df['header'].unique()))
+print(headers)
+
+vectorizer = TfidfVectorizer(
+    analyzer = 'word',
+    # ngram_range=(2,2),
+    lowercase = True,
+    strip_accents='unicode',
+    stop_words='english'
+)
+
+headerVects = vectorizer.fit_transform(headers).toarray()
+print(vectorizer.get_feature_names())
 
 #%%
-"""
-Next step is to compare each word in the title with each of our category vectors. 
-Return the minimum distance between all words in sentence with closest situation keyword
-If distance is less than 10, classify as applicable to that title
-"""
 
-def closestVect(text):
-    minDist = 10 #TODO - this is hardcoded for now... this might need to be tuned
-    closestKeyWord = None
-    
-    for w in text.split(" "):
-        try:
-            if len(w.strip())>0:
-                v = glove_vectors.word_vec(w)
-                # dist = glove_vectors.cosine_similarities(v, catDf.values)
-                # found that euclidean dist worked better than cosine similarity...
-                dist = np.sum(np.square(catDf - v), axis = 1)
-                idx = np.argmin(dist)
-                d = dist[idx]
-                kw = catDf.index[idx]
-                if d < minDist:
-                    closestKeyWord = kw
-                    minDist = d
-        except Exception as e:
-            # sometimes the words are not in glove_vectors, so just ignore those errors
-            # print(e)
-            pass
-    return closestKeyWord
+
+promptList = list(promptDf['prompt'].values)
+
+promptVects = vectorizer.transform(promptList).toarray()
+
+
+#%%
+
+def cosineSimilarity(vector1, vector2):
+    dot_product = sum(p*q for p,q in zip(vector1, vector2))
+    magnitude = math.sqrt(sum([val**2 for val in vector1])) * math.sqrt(sum([val**2 for val in vector2]))
+    if not magnitude:
+        return 0
+    return dot_product/magnitude
     
 
-df['category'] = df['header'].apply(closestVect)
+sims = []
+for j, h in enumerate(headers):
+    d = []
+    for i, p in enumerate(promptList):
+        a = headerVects[j,:]
+        b = promptVects[i,:]
+        # print(a)
+        # print(b)
+        cs = cosineSimilarity(a, b)
+        d.append(cs)
+        # print(cs)
+        # break
+    sims.append(d)
+        
+sims = np.array(sims)
+
+bestMatches = np.argmax(sims, axis=0)
+
+relevantHeaders = []
+for m in bestMatches:
+    relevantHeaders.append(headers[m])
+    
+# relHeaders = {}
+    
+# for i, h in enumerate(relevantHeaders):
+#     relHeaders[h]=i
+
+
+#%%
+df['category'] = ''
+
+for i, h in enumerate(relevantHeaders):
+    df['category'][df['header'] == h] = PROMPT_KEYS[i]
+
 
 #%%
 """
 Next step is to limit to rows that match one of the 4 categories
 """
-df = df[np.logical_not(df['category'].isnull())]
+df = df[np.logical_not(df['category']=='')]
 
 headerDf = df[['headerIndex', 'header', 'category']]
 headerDf = headerDf.drop_duplicates()
@@ -304,7 +339,8 @@ We need to remove the dups within each category.
 Here's an example to show which phrases in the text are close to one of the general rules
 """
 
-doc = "Avoid crowds"
+doc = genRulesDf.loc[1][0]
+print(doc)
 vec_bow = dictionary.doc2bow(doc.lower().split())
 vec_lsi = lsi[vec_bow] 
 print(vec_lsi)
@@ -325,24 +361,24 @@ for i, (sim, text) in enumerate(orderedResults):
     print(sim, text)
 
 
-
 #%%
 """
 add a column to show similarity of each row to the general rules
 """
-for i, gen in enumerate(GENERAL_RULES):
-    vec_bow = dictionary.doc2bow(gen.lower().split())
+for i, gen in enumerate(genRulesDf.values):
+    gen = gen[0].split()
+    vec_bow = dictionary.doc2bow(gen)
     vec_lsi = lsi[vec_bow]
     sims = index[vec_lsi]
     df[rule_shortNames[i]] = sims
 
 #%%
 # a threshold to id very similar phrases
-THRESHOLD = 0.999  # TODO: this probably should be tuned 
+THRESHOLD = 0.9999  # TODO: this probably should be tuned 
 
 dfs = []
 
-for cat in CATEGORIES:
+for cat in PROMPT_KEYS:
     print('--------')
     print(cat)
     tempDf = df[df['category'] == cat]
@@ -366,9 +402,6 @@ finalDf = pd.concat(dfs)
 format final output per HTM spec and save to csv
 """
 
-finalDf['category'] = finalDf['category'].str.replace('older', 'older_adult', regex=False)
-finalDf['category'] = finalDf['category'].str.replace('newborns', 'covid_with_newborn', regex=False)
-
 finalDf.columns = ['situation', 'rules']
 
 print(finalDf)
@@ -377,7 +410,10 @@ fileName = './submission/Challenge2_submission.csv'
 
 finalDf.to_csv(fileName, index=False)
 
-
-
+#%%
+"""
+check counts by category
+"""
+print(finalDf.groupby('situation').count())
 
 
