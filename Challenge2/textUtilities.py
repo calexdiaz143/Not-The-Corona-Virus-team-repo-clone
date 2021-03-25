@@ -53,6 +53,7 @@ def union(genRules, rulesShort, category, df, threshold):
     #print(returnSet)
     return returnSet
 
+#comment
 # with open("./Challenge2/data/CDCGuidelines.txt", encoding="utf8") as myFile:
 # # filename = askopenfilename()
 # # with open(filename, encoding="utf8") as myFile:
