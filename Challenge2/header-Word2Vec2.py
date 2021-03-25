@@ -20,7 +20,8 @@ from collections import defaultdict
 glove_vectors = gensim.downloader.load('glove-wiki-gigaword-50')
 #nltk.download('averaged_perceptron_tagger')
 en_stops = set(stopwords.words('english'))
-
+if 'you' in en_stops:
+    en_stops.remove('you')
 #%%
 ## Setup: initialize some constants
 
@@ -46,7 +47,9 @@ rule_shortNames = ['wear_mask',
 
 # chose to modify the situation keywords slightly to make them single words
 CATEGORIES = ['sick', 'older', 'asthma', 'newborns']
-
+PROMPTS = ['If you are sick with COVID-19', 'If you are an older adult', 
+           'If you have asthma', 
+           'If you are at home caring for a newborn and are diagnosed with or test positive for COVID-19']
 #%%
 # Parse the CDC guidelines text file into a python dictionary, where the keys are the title
 # headers and the values are a list of sentences that fall under that header
@@ -158,6 +161,15 @@ genRulesDf = nlpCleanup(genRulesDf, columnName='rule')
 
 print(genRulesDf.head())
 
+#%%
+"""
+pre-process prompts rules
+"""
+promptsDf = pd.DataFrame(PROMPTS, columns=['header'])
+
+promptsDf = nlpCleanup(promptsDf, columnName='header')
+
+print(promptsDf.head())
 #%%
 """
 Next step is to vectorize the situation keywords (aka categories)
@@ -326,6 +338,31 @@ for i, gen in enumerate(GENERAL_RULES):
     df[rule_shortNames[i]] = sims
 
 #%%
+"""
+prompt code
+"""
+promptsTexts = [
+    [word for word in document.lower().split() if word not in en_stops]
+    for document in PROMPTS
+]
+
+promptDict = corpora.Dictionary(promptsTexts)
+promptCorpus = [promptDict.doc2bow(promptText) for promptText in promptsTexts]
+promptLsi = models.LsiModel(promptCorpus, id2word=promptDict,  num_topics=2)
+promptDoc = "if you are old and have asthma"
+prompt_vec_bow = promptDict.doc2bow(promptDoc.lower().split())
+prompt_vec_lsi = promptLsi[prompt_vec_bow]
+print(prompt_vec_lsi)
+promptIndex = similarities.MatrixSimilarity(promptLsi[promptCorpus])
+
+promptSims = promptIndex[prompt_vec_lsi]  # perform a similarity query against the corpus
+print(list(enumerate(promptSims)))
+
+promptSims = sorted(enumerate(promptSims), key=lambda item: -item[1])
+for doc_position, doc_score in promptSims:
+    print(doc_score, PROMPTS[doc_position])
+    
+#%%
 # a threshold to id very similar phrases
 THRESHOLD = 0.999  # TODO: this probably should be tuned
 
@@ -364,6 +401,7 @@ print(finalDf)
 
 fileName = './submission/Challenge2_submission.csv'
 
+finalDf = finalDf.drop_duplicates()
 finalDf.to_csv(fileName, index=False)
 
 
@@ -387,10 +425,9 @@ finalDf.to_csv(fileName, index=False)
 
 #     return returnSet.drop_duplicates(subset=['text_orig'])
 
-#     # return list(dict.fromkeys(returnSet))
-#     #return matchRules(genRules[0], rulesShort[0], category, df, threshold)
+    # return list(dict.fromkeys(returnSet))
+    #return matchRules(genRules[0], rulesShort[0], category, df, threshold)
 
 # print("testing Union")
 # returnSick = union(GENERAL_RULES, rule_shortNames, CATEGORIES[0], df, 0.99)
-
 
