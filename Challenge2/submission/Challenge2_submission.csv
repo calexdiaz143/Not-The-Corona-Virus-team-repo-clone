@@ -15,25 +15,7 @@ sick,Wash your hands.
 sick,"Do not share dishes, drinking glasses, cups, eating utensils, towels, or bedding with other people in your home."
 sick,"Clean the area or item with soap and water or another detergent if it is dirty. Then, use a household disinfectant."
 sick,Be sure to follow the instructions on the label to ensure safe and effective use of the product.
-sick,"Monitor your symptoms. If you have an emergency warning sign (including trouble breathing), seek emergency medical care immediately"
-sick,"Use a separate bathroom, if possible"
-sick,Find CDC’s recommendations for your situation below.
-sick,Provide support
-sick,Help the person who is sick follow their doctor’s instructions for care and medicine.
-sick,See if over-the-counter medicines for fever help the person feel better.
-sick,Make sure the person who is sick drinks a lot of fluids and rests.
-sick,"Help them with grocery shopping, filling prescriptions, and getting other items they may need. Consider having the items delivered through a delivery service, if possible."
-sick,"Take care of their pet(s), and limit contact between the person who is sick and their pet(s) when possible."
-sick,Have their doctor’s phone number on hand.
-sick,"Call their doctor if the person keeps getting sicker. For medical emergencies, call 911 and tell the dispatcher that the person has or might have COVID-19."
-sick,Call 911 or call ahead to your local emergency facility: Notify the operator that you are seeking care for someone who has or may have COVID-19.
-sick,"Wash your hands frequently with soap and water for at least 20 seconds. If soap and water are not available, use hand sanitizer containing at least 60% alcohol and rub your hands together until they are dry."
-sick,Disinfect any items that you need to bring to the child.
-sick,Do not disinfect food that you bring to the child.
-sick,"Check the child’s temperature twice a day and watch for symptoms of COVID-19, such as fever, cough or shortness of breath, or symptoms specific to children."
-sick,"Check the child’s temperature twice a day and watch for symptoms of COVID-19, such as fever, cough or shortness of breath, or symptoms specific to children."
 sick,Wear a mask
-sick,Stay 6 feet from others
 sick,Avoid crowds
 sick,Avoid poorly ventilated spaces
 older_adult,Do not change your treatment plan without talking to your healthcare provider.
@@ -59,8 +41,11 @@ older_adult,"Complete your care plan in consultation with your doctor, and if ne
 older_adult,Remember the importance of staying physically active and practicing healthy habits to cope with stress.
 older_adult,"Get tips on staying connected while at home in English and Spanish icon There are community agencies who may be able to help, and call lines that provide a friendly voice and emotional support to older adults."
 older_adult,Wear a mask
+older_adult,Stay 6 feet from others
 older_adult,Avoid crowds
 older_adult,Avoid poorly ventilated spaces
+older_adult,Wash your hands often
+older_adult,Clean and disinfect frequently touched surfaces daily
 asthma,Make sure that you have at least a 30-day supply of your medicines.
 asthma,"Take everyday precautions like washing your hands, avoiding close contact, and staying at least 6 feet (about 2 arm lengths) from other people."
 asthma,Wash your hands often with soap and water for at least 20 seconds or use hand sanitizer that contains at least 60% alcohol.
@@ -68,7 +53,6 @@ asthma,Wear a mask
 asthma,Stay 6 feet from others
 asthma,Avoid crowds
 asthma,Avoid poorly ventilated spaces
-asthma,Wash your hands often
 asthma,Cover coughs and sneezes
 asthma,Monitor your health daily
 asthma,Get vaccinated
@@ -110,7 +94,6 @@ covid_with_newborn,"Have the baby share your room but not your bed. Your baby sh
 covid_with_newborn,"Keep soft bedding, such as blankets, pillows, bumper pads, and soft toys, out of your baby’s sleep area."
 covid_with_newborn,Do not cover your baby’s head or allow your baby to get too hot. Signs your baby may be getting too hot include sweating or his or her chest feeling hot.
 covid_with_newborn,Do not smoke or allow anyone to smoke around your baby.
-covid_with_newborn,Wear a mask
 covid_with_newborn,Stay 6 feet from others
 covid_with_newborn,Avoid crowds
 covid_with_newborn,Avoid poorly ventilated spaces
