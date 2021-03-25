@@ -19,6 +19,9 @@ sick,Wear a mask
 sick,Stay 6 feet from others
 sick,Avoid crowds
 sick,Avoid poorly ventilated spaces
+sick,Clean and disinfect frequently touched surfaces daily
+sick,Monitor your health daily
+sick,Get vaccinated
 older_adult,Do not change your treatment plan without talking to your healthcare provider.
 older_adult,Have at least a 30-day supply of medicine.
 older_adult,Do not delay getting emergency care.
@@ -46,7 +49,9 @@ older_adult,Stay 6 feet from others
 older_adult,Avoid crowds
 older_adult,Avoid poorly ventilated spaces
 older_adult,Wash your hands often
+older_adult,Cover coughs and sneezes
 older_adult,Clean and disinfect frequently touched surfaces daily
+older_adult,Monitor your health daily
 older_adult,Get vaccinated
 asthma,Make sure that you have at least a 30-day supply of your medicines.
 asthma,"Take everyday precautions like washing your hands, avoiding close contact, and staying at least 6 feet (about 2 arm lengths) from other people."
@@ -55,8 +60,8 @@ asthma,Wear a mask
 asthma,Stay 6 feet from others
 asthma,Avoid crowds
 asthma,Avoid poorly ventilated spaces
-asthma,Wash your hands often
 asthma,Cover coughs and sneezes
+asthma,Clean and disinfect frequently touched surfaces daily
 asthma,Monitor your health daily
 asthma,Get vaccinated
 covid_with_newborn,Take steps to prevent getting COVID-19 when you do interact with others.
@@ -102,3 +107,6 @@ covid_with_newborn,Stay 6 feet from others
 covid_with_newborn,Avoid crowds
 covid_with_newborn,Avoid poorly ventilated spaces
 covid_with_newborn,Cover coughs and sneezes
+covid_with_newborn,Clean and disinfect frequently touched surfaces daily
+covid_with_newborn,Monitor your health daily
+covid_with_newborn,Get vaccinated
