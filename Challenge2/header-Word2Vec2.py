@@ -327,7 +327,7 @@ for i, gen in enumerate(GENERAL_RULES):
 
 #%%
 # a threshold to id very similar phrases
-THRESHOLD = 0.99999  # TODO: this probably should be tuned 
+THRESHOLD = 0.999  # TODO: this probably should be tuned 
 
 dfs = []
 
