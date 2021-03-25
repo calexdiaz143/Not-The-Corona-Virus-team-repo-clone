@@ -36,8 +36,6 @@ sick,Wear a mask
 sick,Stay 6 feet from others
 sick,Avoid crowds
 sick,Avoid poorly ventilated spaces
-sick,Wash your hands often
-sick,Clean and disinfect frequently touched surfaces daily
 older_adult,Do not change your treatment plan without talking to your healthcare provider.
 older_adult,Have at least a 30-day supply of medicine.
 older_adult,Do not delay getting emergency care.
@@ -61,11 +59,8 @@ older_adult,"Complete your care plan in consultation with your doctor, and if ne
 older_adult,Remember the importance of staying physically active and practicing healthy habits to cope with stress.
 older_adult,"Get tips on staying connected while at home in English and Spanish icon There are community agencies who may be able to help, and call lines that provide a friendly voice and emotional support to older adults."
 older_adult,Wear a mask
-older_adult,Stay 6 feet from others
 older_adult,Avoid crowds
 older_adult,Avoid poorly ventilated spaces
-older_adult,Wash your hands often
-older_adult,Clean and disinfect frequently touched surfaces daily
 asthma,Make sure that you have at least a 30-day supply of your medicines.
 asthma,"Take everyday precautions like washing your hands, avoiding close contact, and staying at least 6 feet (about 2 arm lengths) from other people."
 asthma,Wash your hands often with soap and water for at least 20 seconds or use hand sanitizer that contains at least 60% alcohol.
@@ -75,7 +70,6 @@ asthma,Avoid crowds
 asthma,Avoid poorly ventilated spaces
 asthma,Wash your hands often
 asthma,Cover coughs and sneezes
-asthma,Clean and disinfect frequently touched surfaces daily
 asthma,Monitor your health daily
 asthma,Get vaccinated
 covid_with_newborn,Take steps to prevent getting COVID-19 when you do interact with others.
@@ -120,6 +114,3 @@ covid_with_newborn,Wear a mask
 covid_with_newborn,Stay 6 feet from others
 covid_with_newborn,Avoid crowds
 covid_with_newborn,Avoid poorly ventilated spaces
-covid_with_newborn,Wash your hands often
-covid_with_newborn,Cover coughs and sneezes
-covid_with_newborn,Clean and disinfect frequently touched surfaces daily
