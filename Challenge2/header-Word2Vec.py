@@ -27,7 +27,7 @@ GENERAL_RULES = ['Wear a mask',
     'Get vaccinated']
 
 # chose to modify the situation keywords slightly to make them single words
-CATEGORIES = ['sick', 'elderly', 'asthma', 'newborn']
+CATEGORIES = ['sick', 'older', 'asthma', 'newborns']
 
 #%%
 # Parse the CDC guidelines text file into a python dictionary, where the keys are the title 
@@ -69,7 +69,9 @@ with open(filename, encoding="utf8") as myFile:
     data = myFile.read()
 
 df = textToDataFrame(data, "***")
-print(df)
+print(df.sample())
+
+headers = df['header'].unique()
 #%%
 
 """
@@ -110,7 +112,7 @@ I am using the glove vectors, which is a word2vec model trained on wikipedia
 """
 cat_vects = []
 for c in CATEGORIES:
-    v = glove_vectors.wv[c]
+    v = glove_vectors.word_vec[c]
     cat_vects.append(v)
     
 catDf = pd.DataFrame(data = cat_vects, index = CATEGORIES)
@@ -129,7 +131,9 @@ def closestVect(text):
     for w in text.split(" "):
         try:
             if len(w.strip())>0:
-                v = glove_vectors.wv[w]
+                v = glove_vectors.word_vec(w)
+                # dist = glove_vectors.cosine_similarities(v, catDf.values)
+                # found that euclidean dist worked better than cosine similarity...
                 dist = np.sum(np.square(catDf - v), axis = 1)
                 idx = np.argmin(dist)
                 d = dist[idx]
@@ -145,3 +149,8 @@ def closestVect(text):
 
 
 df['category'] = df['header'].apply(closestVect)
+
+#%%
+df = df[np.logical_not(df['category'].isnull())]
+
+
